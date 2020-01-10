@@ -9,6 +9,11 @@ h2 {
     text-align: center;
 }
 
+h2 {
+    padding-top: 20px;
+    border-top: 1px solid dimgray;
+}
+
 article div {
     border-radius: 5px;
     
@@ -30,11 +35,11 @@ article:first-child section > div {
     background-color: darkslategray;
 }
 
-article:first-child div > div {
+article:first-child section > div > div {
     background-color: cadetblue;
 }
 
-article:first-child div > div div {
+article:first-child section > div > div div {
     background-color: lightblue;
 }
 
@@ -49,7 +54,7 @@ article:nth-child(2) section > div {
     background-color: darkslategray;
 }
 
-article:nth-child(2) div > div {
+article:nth-child(2) section > div > div {
     position: relative;
     top: 50px;
     left: 175px;
@@ -59,7 +64,7 @@ article:nth-child(2) div > div {
     background-color: rgba(95, 158, 160, .5);
 }
 
-article:nth-child(2) div > div div {
+article:nth-child(2) section > div > div div {
     position: relative;
     top: 50px;
     left: -350px;
@@ -72,6 +77,10 @@ article:nth-child(2) div > div div {
 /* PARTIE 3 : ABSOLUE
 --------------------------------------------------*/
 
+article:nth-child(3) section {
+    height: 325px;
+}
+
 article:nth-child(3) section > div {
     position: relative;
     margin: auto;
@@ -81,7 +90,7 @@ article:nth-child(3) section > div {
     background-color: darkslategray;
 }
 
-article:nth-child(3) div > div {
+article:nth-child(3) section > div > div {
     position: absolute;
     top: 50px;
     left: 50px;
@@ -91,7 +100,7 @@ article:nth-child(3) div > div {
     background-color: cadetblue;
 }
 
-article:nth-child(3) div > div div {
+article:nth-child(3) section > div > div div {
     position: absolute;
     top: 170px;
     left: 150px;
@@ -99,4 +108,50 @@ article:nth-child(3) div > div div {
     height: 100px;
     
     background-color: lightblue;
+}
+
+/* PARTIE 4 : ABSOLUTE
+--------------------------------------------------*/
+
+article:nth-child(4) section {
+    height: 530px;
+}
+
+article:nth-child(4) section > div {
+    position: relative;
+    margin: auto;
+    width: 600px;
+    height: 100px;
+    
+    background-color: darkslategray;
+}
+
+article:nth-child(4) section > div > div {
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    width: 200px;
+    height: 200px;
+    
+    background-color: cadetblue;
+}
+
+article:nth-child(4) section > div > div > div {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    
+    background-color: lightblue;
+}
+
+article:nth-child(4) section > div > div > div div {
+    position: absolute;
+    top:175px;
+    left: 175px;
+    width: 100px;
+    height: 100px;
+    
+    background-color: cornflowerblue;
 }

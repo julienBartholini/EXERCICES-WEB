@@ -6,12 +6,13 @@
 
 h1,
 h2 {
+    color: grey;
     text-align: center;
 }
 
 h2 {
     padding-top: 20px;
-    border-top: 1px solid dimgray;
+    border-top: 1px solid grey;
 }
 
 article div {
@@ -154,4 +155,54 @@ article:nth-child(4) section > div > div > div div {
     height: 100px;
     
     background-color: cornflowerblue;
+}
+
+/* PARTIE 5 : LA FENETRE
+--------------------------------------------------*/
+article:nth-child(5) section * {
+    box-sizing: border-box;
+}
+
+article:nth-child(5) section {
+    height: 530px;
+}
+
+article:nth-child(5) section > div {
+    margin: auto;
+    padding: 30px;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    
+    background-color: darkslategray;
+}
+
+article:nth-child(5) section > div div {
+    
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+article:nth-child(5) section > div div:first-child {
+    background-color: cadetblue;
+}
+
+article:nth-child(5) section > div div:nth-child(2) {
+    left: 267px;
+    
+    background-color: lightblue;
+}
+
+article:nth-child(5) section > div div:nth-child(3) {
+    top:267px;
+    
+    background-color: cornflowerblue;
+}
+
+article:nth-child(5) section > div div:last-child {
+    top: 267px;
+    left: 267px;
+    
+    background-color: aliceblue;
 }

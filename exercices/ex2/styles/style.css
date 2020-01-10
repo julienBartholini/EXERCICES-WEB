@@ -30,11 +30,11 @@ article:first-child section > div {
     background-color: darkslategray;
 }
 
-article:first-child section > div > div {
+article:first-child div > div {
     background-color: cadetblue;
 }
 
-article:first-child section > div > div div {
+article:first-child div > div div {
     background-color: lightblue;
 }
 
@@ -49,7 +49,7 @@ article:nth-child(2) section > div {
     background-color: darkslategray;
 }
 
-article:nth-child(2) section > div > div {
+article:nth-child(2) div > div {
     position: relative;
     top: 50px;
     left: 175px;
@@ -59,11 +59,43 @@ article:nth-child(2) section > div > div {
     background-color: rgba(95, 158, 160, .5);
 }
 
-article:nth-child(2) section > div > div div {
+article:nth-child(2) div > div div {
     position: relative;
     top: 50px;
     left: -350px;
     width: 450px;
+    height: 100px;
+    
+    background-color: lightblue;
+}
+
+/* PARTIE 3 : ABSOLUE
+--------------------------------------------------*/
+
+article:nth-child(3) section > div {
+    position: relative;
+    margin: auto;
+    width: 600px;
+    height: 200px;
+    
+    background-color: darkslategray;
+}
+
+article:nth-child(3) div > div {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 500px;
+    height: 100px;
+    
+    background-color: cadetblue;
+}
+
+article:nth-child(3) div > div div {
+    position: absolute;
+    top: 170px;
+    left: 150px;
+    width: 100px;
     height: 100px;
     
     background-color: lightblue;

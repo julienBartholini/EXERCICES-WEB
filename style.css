@@ -111,3 +111,8 @@ img {
         transform: translate(-50%, -50%) rotateY(180deg);
     }
 }
+
+footer {
+    font-size: 10px;
+    text-align: center;
+}

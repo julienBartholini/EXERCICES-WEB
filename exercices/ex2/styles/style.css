@@ -4,6 +4,10 @@
     letter-spacing: 1px;
 }
 
+body {
+    margin: 0;
+}
+
 h1,
 h2 {
     color: grey;
@@ -12,6 +16,7 @@ h2 {
 
 h2 {
     padding-top: 20px;
+    
     border-top: 1px solid grey;
 }
 
@@ -19,14 +24,14 @@ ul,
 li,
 a {
     padding: 0;
-    
+
     color: black;
     font-style: italic;
     text-align: center;
     text-decoration: none;
     text-shadow: -1px 1px 0 white;
     line-height: 2;
-    
+
     list-style: none;
 }
 
@@ -68,9 +73,12 @@ article:nth-child(2) section > div {
     background-color: darkslategray;
 }
 
-article:nth-child(2) section > div > div {
+article:nth-child(2) section > div * {
     position: relative;
     top: 50px;
+}
+
+article:nth-child(2) section > div > div {
     left: 175px;
     width: 500px;
     height: 200px;
@@ -79,8 +87,6 @@ article:nth-child(2) section > div > div {
 }
 
 article:nth-child(2) section > div > div div {
-    position: relative;
-    top: 50px;
     left: -350px;
     width: 450px;
     height: 100px;
@@ -95,30 +101,31 @@ article:nth-child(3) section {
 }
 
 article:nth-child(3) section > div {
-    position: relative;
     margin: auto;
+    position: relative;
     width: 600px;
     height: 200px;
 
     background-color: darkslategray;
 }
 
-article:nth-child(3) section > div > div {
+article:nth-child(3) section > div * {
     position: absolute;
+    height: 100px;
+}
+
+article:nth-child(3) section > div > div {
     top: 50px;
     left: 50px;
     width: 500px;
-    height: 100px;
 
     background-color: cadetblue;
 }
 
 article:nth-child(3) section > div > div div {
-    position: absolute;
     top: 170px;
     left: 150px;
     width: 100px;
-    height: 100px;
 
     background-color: lightblue;
 }
@@ -130,8 +137,8 @@ article:nth-child(4) section {
 }
 
 article:nth-child(4) section > div {
-    position: relative;
     margin: auto;
+    position: relative;
     width: 600px;
     height: 100px;
 
@@ -148,23 +155,23 @@ article:nth-child(4) section > div > div {
     background-color: cadetblue;
 }
 
-article:nth-child(4) section > div > div > div {
+article:nth-child(4) section > div > div * {
     position: absolute;
-    top: 50px;
-    left: 50px;
     width: 100px;
     height: 100px;
+}
+
+article:nth-child(4) section > div > div > div {
+    top: 50px;
+    left: 50px;
 
     background-color: lightblue;
 }
 
 article:nth-child(4) section > div > div > div div {
-    position: absolute;
     top: 175px;
     left: 175px;
-    width: 100px;
-    height: 100px;
-
+    
     background-color: cornflowerblue;
 }
 
@@ -188,10 +195,18 @@ article:nth-child(5) section > div {
     background-color: darkslategray;
 }
 
-article:nth-child(5) section > div div {
+article:nth-child(5) section > div * {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 205px;
+    height: 205px;
+}
+
+.part5Elts_rightPositioner {
+    right: 30px;
+}
+
+.part5Elts_bottomPositioner {
+    bottom: 30px;
 }
 
 article:nth-child(5) section > div div:first-child {
@@ -199,21 +214,14 @@ article:nth-child(5) section > div div:first-child {
 }
 
 article:nth-child(5) section > div div:nth-child(2) {
-    left: 267px;
-
     background-color: lightblue;
 }
 
 article:nth-child(5) section > div div:nth-child(3) {
-    top: 267px;
-
     background-color: cornflowerblue;
 }
 
 article:nth-child(5) section > div div:last-child {
-    top: 267px;
-    left: 267px;
-
     background-color: aliceblue;
 }
 
@@ -237,7 +245,7 @@ article:nth-child(6) section > div {
     background-color: cadetblue;
 }
 
-article:nth-child(6) section > div div {
+article:nth-child(6) section > div * {
     position: absolute;
     width: 200px;
     height: 200px;
@@ -252,7 +260,7 @@ article:nth-child(6) section > div div:nth-child(2) {
     left: 65px;
 
     background-color: dodgerblue;
-    
+
     opacity: .5;
     z-index: 2;
 }
@@ -262,7 +270,7 @@ article:nth-child(6) section > div div:nth-child(3) {
     left: 230px;
 
     background-color: chocolate;
-    
+
     z-index: 1;
 }
 
@@ -293,7 +301,7 @@ article:nth-child(7) section > div {
 article:nth-child(7) section > div div {
     width: 150px;
     height: 150px;
-    
+
     color: black;
     font-size: 12px;
     font-style: italic;
@@ -301,87 +309,89 @@ article:nth-child(7) section > div div {
     line-height: 12;
 }
 
-article:nth-child(7) section > div div:first-child {
+.part7Elts_leftFloater {
     float: left;
-    
+}
+
+.part7Elts_rightFloater {
+    float: right;
+}
+
+article:nth-child(7) section > div div:first-child {
     background-color: blueviolet;
 }
 
 article:nth-child(7) section > div div:nth-child(2) {
-    float: left;
-    
     background-color: indigo;
 }
 
 article:nth-child(7) section > div div:nth-child(3) {
     clear: both;
     width: 100%;
-    
+
     background-color: navajowhite;
 }
 
 article:nth-child(7) section > div div:nth-child(4) {
-    float: right;
-    
     background-color: olivedrab;
 }
 
 article:nth-child(7) section > div div:last-child {
-    float: right;
-    
     background-color: greenyellow;
 }
 
 /* PARTIE 8 : STIKY MENU
 ----------------------------------------------------------------------*/
-article:last-child {
+article:last-child section {
     margin: auto;
     width: 900px;
 }
 
-article:last-child section nav {
+article:last-child nav {
     padding: 5px 20px;
     float: left;
     position: sticky;
     top: 10px;
     width: 15%;
-    
+
     border-radius: 3px;
-    
+
     background-image: linear-gradient(45deg, lightblue 90%, transparent 90%);
     box-shadow:
         -10px 10px 10px rgba(0, 0, 0, .3),
-        0 0 10px 10px inset rgba(255, 255, 255, .2);
-    
+        0 0 10px 10px inset rgba(255, 255, 255, .1);
+
     overflow: hidden;
 }
 
-article:last-child section nav::before {
+article:last-child nav::before,
+article:last-child nav::after {
     content: '';
     position: absolute;
+}
+
+article:last-child nav::before {
     top: 0;
     right: 0;
     width: 38px;
     height: 38px;
-    
+
     border-bottom-left-radius: 3px;
-    
+
     background-image: linear-gradient(45deg, lightblue 50%, transparent 50%);
     box-shadow: 0 4px 5px rgba(0, 0, 0, .3);
 }
 
-article:last-child section nav::after {
-    content: '';
-    position: absolute;
+article:last-child nav::after {
     top: 10px;
     left: 10px;
     width: 15px;
     height: 15px;
-    
-    border: solid white;
-    border-width: 0 0 1px 1px;
+
+    border: solid cadetblue;
+    border-width: 1px 1px 0 0;
     border-radius: 100%;
-    
+
     background-color: white;
     box-shadow: -5px 5px 10px inset rgba(0, 0, 0, .3);
 }
@@ -391,7 +401,7 @@ article:last-child section p {
     display: inline-block;
     position: relative;
     width: 75%;
-    
+
     text-align: justify;
     line-height: 1.25;
 }
@@ -400,14 +410,13 @@ article:last-child section p {
 ----------------------------------------------------------------------*/
 footer {
     margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 30px;
 
     background-color: cadetblue;
-    
+
     color: white;
     font: normal 14px helvetica;
+    text-align: center;
+    line-height: 2;
 }

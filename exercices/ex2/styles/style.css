@@ -340,7 +340,7 @@ article:nth-child(7) section > div div:last-child {
     background-color: greenyellow;
 }
 
-/* PARTIE 8 : STIKY MENU
+/* PARTIE 8 : STICKY MENU
 ----------------------------------------------------------------------*/
 article:last-child section {
     margin: auto;

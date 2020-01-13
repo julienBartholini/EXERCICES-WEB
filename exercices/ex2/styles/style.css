@@ -177,16 +177,73 @@ article:nth-child(4) section > div > div > div div {
 
 /* PARTIE 5 : LA FENETRE
 ----------------------------------------------------------------------*/
-article:nth-child(5) section * {
-    box-sizing: border-box;
-}
-
-article:nth-child(5) section {
-    height: 505px;
-}
 
 article:nth-child(5) section > div {
     margin: auto;
+}
+
+/* VERSION ABSOLUTE
+-------------------------------------------------- */
+article:nth-child(5) :nth-child(2) * {
+    box-sizing: border-box;
+}
+
+article:nth-child(5) :nth-child(2) {
+    margin-bottom: 20px;
+    height: 505px;
+}
+
+article:nth-child(5) :nth-child(2) > div {
+    padding: 30px;
+    
+    position: relative;
+    width: 500px;
+    height: 500px;
+
+    background-color: darkslategray;
+}
+
+article:nth-child(5) :nth-child(2) > div * {
+    position: absolute;
+    width: 205px;
+    height: 205px;
+}
+
+.part5_verAbso_rightPosElts {
+    right: 30px;
+}
+
+.part5_verAbso_bottomPosElts {
+    bottom: 30px;
+}
+
+article:nth-child(5) :nth-child(2) > div div:first-child {
+    background-color: cadetblue;
+}
+
+article:nth-child(5) :nth-child(2) > div div:nth-child(2) {
+    background-color: lightblue;
+}
+
+article:nth-child(5) :nth-child(2) > div div:nth-child(3) {
+    background-color: cornflowerblue;
+}
+
+article:nth-child(5) :nth-child(2) > div div:last-child {
+    background-color: aliceblue;
+}
+
+/* VERSION RELATIVE 
+-------------------------------------------------- */
+article:nth-child(5) :nth-child(3) * {
+    box-sizing: border-box;
+}
+
+article:nth-child(5) :nth-child(3) {
+    height: 505px;
+}
+
+article:nth-child(5) :nth-child(3) > div {
     padding: 30px;
     position: relative;
     width: 500px;
@@ -195,35 +252,39 @@ article:nth-child(5) section > div {
     background-color: darkslategray;
 }
 
-article:nth-child(5) section > div * {
-    position: absolute;
+article:nth-child(5) :nth-child(3) > div * {
+    display: inline-block;
+    position: relative;
     width: 205px;
     height: 205px;
 }
 
-.part5Elts_rightPositioner {
-    right: 30px;
+.part5_verRela_topPosElts {
+    top: 5px;
 }
 
-.part5Elts_bottomPositioner {
-    bottom: 30px;
+.part5_verRela_leftPosElts {
+    left: 25px;
 }
 
-article:nth-child(5) section > div div:first-child {
+article:nth-child(5) :nth-child(3) > div div:first-child {
+    bottom: 20px;
+    
     background-color: cadetblue;
 }
 
-article:nth-child(5) section > div div:nth-child(2) {
+article:nth-child(5) :nth-child(3) > div div:nth-child(2) {
     background-color: lightblue;
 }
 
-article:nth-child(5) section > div div:nth-child(3) {
+article:nth-child(5) :nth-child(3) > div div:nth-child(3) {
     background-color: cornflowerblue;
 }
 
-article:nth-child(5) section > div div:last-child {
+article:nth-child(5) :nth-child(3) > div div:last-child {
     background-color: aliceblue;
 }
+
 
 /* PARTIE 6 : AU CHOIX
 ----------------------------------------------------------------------*/

@@ -331,7 +331,8 @@ article:nth-child(6) section > div div:nth-child(3) {
     left: 230px;
 
     background-color: chocolate;
-
+    
+    opacity: .9;
     z-index: 1;
 }
 

@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+
+    list-style: none;
+}
+
+h1, h2 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* HEADER + NAV ----------------------------------------------------------------------*/
+
+header {
+    background-color: red;
+}
+
+ul {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+li {
+    flex: 1;
+    border: 1px solid white;
+}
+
+a {
+    padding: 5px;
+    display: block;
+    text-align: center;
+}

@@ -37,3 +37,37 @@ a {
     display: block;
     text-align: center;
 }
+
+/* MAIN ----------------------------------------------------------------------*/
+
+main {
+    display: flex;
+    flex: 1;
+    height: 450px;
+}
+
+aside {
+    flex: 1;
+}
+
+aside:first-child {
+    background-color: yellow;
+}
+
+aside:last-child {
+    background-color: violet;
+}
+
+article {
+    display: flex;
+    flex: 3;
+
+    background-color: lightblue;
+}
+
+p {
+    padding: 20px;
+    flex: 1;
+
+    text-align: justify;
+}

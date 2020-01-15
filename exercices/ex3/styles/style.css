@@ -71,3 +71,15 @@ p {
 
     text-align: justify;
 }
+
+/* FOOTER
+----------------------------------------------------------------------*/
+
+footer {
+    padding: 20px;
+    flex: 1;
+
+    background-color: lightgreen;
+
+    text-align: center;
+}

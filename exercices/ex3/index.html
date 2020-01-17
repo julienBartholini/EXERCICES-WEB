@@ -8,34 +8,36 @@
     <title>FLEX BOX</title>
 </head>
 <body>
-    <!-- (header>h1+nav>h2+ul>li*4>a{Lien $})+(main>aside+(article>p*3>Lorem)+aside)+footer -->
+    <!-- (header>h1{HEADER}+nav>h2{NAV}+ul.flexElts>li.flexWidthElts*4>a{Lien $})+(main.flexElts.flexWithElts>aside.flexWithElts+(article.flexElts>p.flexWidthElts*3>Lorem)+aside.flexWithElts)+footer.flexWidthElts>{JULIEN BARTHOLINI - IFATECH&copy; - DEV WEB 2 - WEB HTML5 CSS - EXERCICE 3 - 2020} -->
     <header>
         <h1>HEADER</h1>
         <nav>
             <h2>NAV</h2>
-            <ul>
-                <li><a href="#">Lien 1</a></li>
-                <li><a href="#">Lien 2</a></li>
-                <li><a href="#">Lien 3</a></li>
-                <li><a href="#">Lien 4</a></li>
+            <ul class="flexElts">
+                <li class="flexWidthElts"><a href="#">Lien 1</a></li>
+                <li class="flexWidthElts"><a href="#">Lien 2</a></li>
+                <li class="flexWidthElts"><a href="#">Lien 3</a></li>
+                <li class="flexWidthElts"><a href="#">Lien 4</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <aside></aside>
-        <article>
-            <p>
+    <main class="flexElts flexWidthElts">
+        <aside class="flexWidthElts"></aside>
+        <article class="flexElts">
+            <p class="flexWidthElts">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, est assumenda perspiciatis voluptate incidunt, debitis eligendi earum dignissimos aliquid officiis provident. Numquam eveniet et illo molestias! Vitae ipsum asperiores tempore.
             </p>
-            <p>
+            <p class="flexWidthElts">
                 Blanditiis neque unde iusto consequuntur impedit veritatis ducimus labore autem, pariatur nisi incidunt doloribus quasi vero eos inventore, cum commodi obcaecati, dignissimos ullam nam? Ea, eum. Atque similique omnis aspernatur.
             </p>
-            <p>
+            <p class="flexWidthElts">
                 Saepe voluptates at exercitationem iusto, impedit voluptate. Ullam perferendis voluptatibus ea obcaecati natus sit, eaque modi adipisci illum illo nisi id, impedit, placeat animi voluptates ratione vel! Quidem, aperiam veniam.
             </p>
-        </article>
-        <aside></aside>
+        </article class="flexElts">
+        <aside class="flexWidthElts"></aside>
     </main>
-    <footer></footer>
+    <footer class="flexWidthElts">
+        JULIEN BARTHOLINI - IFATECH&copy; - DEV WEB 2 - WEB HTML5 CSS - EXERCICE 3 - 2020
+    </footer>
 </body>
 </html>

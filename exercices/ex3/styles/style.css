@@ -51,18 +51,21 @@ main {
     height: 500px;
 }
 
-aside:first-child {
+#asideGauche {
     background-color: yellow;
 }
 
-aside:last-child {
+#asideDroite {
     background-color: violet;
 }
 
 article {
+    flex-wrap: wrap;
     flex: 3;
 
     background-color: lightblue;
+    
+    overflow: auto;
 }
 
 p {

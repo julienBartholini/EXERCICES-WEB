@@ -17,36 +17,39 @@ main {
   margin: auto;
   display: grid;
   grid-template-areas:
-  'w1 w1 w2 w2 w2 w2 w2 w2 w2 w2 w2 w2 w2 w2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  'w1 w1 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  'w1 w1 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  'w1 w1 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
-  '.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .';
-  width: 700px;
-  height: 500px;
+  'w1 w1   w2 w2 w2 w2 w2 w2 w2 w2 w2 w2 w2 w2 w3  w3  w3  w3  w3 w3 w3 w3 w3 w3 w3 w3 w3  w3 w4 w4 y1 y1'
+  'w1 w1   b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 w5  w5  w5  w5  w5 b2 b2 b2 b2 b2 b2 b2 b2  b2 w4 w4 y1 y1'
+  'w1 w1   b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 w5  w5  w5  w5  w5 b2 b2 b2 b2 b2 b2 b2 b2  b2 w4 w4 y1 y1'
+  'w1 w1   b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 w5  w5  w5  w5  w5 b2 b2 b2 b2 b2 b2 b2 b2  b2 w4 w4 y1 y1'
+  '.  .    w6 w6 w6 w6 .  .  w7 w7 w7 w7 w8 w8 y2  y2  y2  y2  y2 r1 r1 r1 r1 r1 r1 r1 r2  r2 w4 w4 y1 y1'
+  '.  .    w6 w6 w6 w6 .  .  w7 w7 w7 w7 w8 w8 y2  y2  y2  y2  y2 r1 r1 r1 r1 r1 r1 r1 r2  r2 w4 w4 y1 y1'
+  '.  .    w6 w6 w6 w6 .  .  w7 w7 w7 w7 w8 w8 y2  y2  y2  y2  y2 r1 r1 r1 r1 r1 r1 r1 r2  r2 w4 w4 y1 y1'
+  '.  .    w6 w6 w6 w6 .  .  w7 w7 w7 w7 w8 w8 y2  y2  y2  y2  y2 r1 r1 r1 r1 r1 r1 r1 r2  r2 w4 w4 y1 y1'
+  '.  .    w6 w6 w6 w6 .  .  w7 w7 w7 w7 w8 w8 y2  y2  y2  y2  y2 r1 r1 r1 r1 r1 r1 r1 r2  r2 w4 w4 y1 y1'
+  '.  .    w6 w6 w6 w6 .  .  w7 w7 w7 w7 w8 w8 y2  y2  y2  y2  y2 r1 r1 r1 r1 r1 r1 r1 r2  r2 w4 w4 y1 y1'
+  '.  .    w6 w6 w6 w6 .  .  y3 y3 r3 r3 r3 r3 b3  b3  b3  b3  b3 w9 w9 w9 w9 w9 w9 w9 w10 w10 .  .  .  .'
+  '.  .    w6 w6 w6 w6 .  .  y3 y3 r3 r3 r3 r3 b3  b3  b3  b3  b3 w9 w9 w9 w9 w9 w9 w9 w10 w10 .  .  .  .'
+  '.  .    w6 w6 w6 w6 .  .  y3 y3 r3 r3 r3 r3 b3  b3  b3  b3  b3 w9 w9 w9 w9 w9 w9 w9 w10 w10 .  .  .  .'
+  'w11 w11 r4 r4 r4 r4 .  .  y4 y4 w12 w12 w12 w12 w12 w12 w12 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
+  'w11 w11 r4 r4 r4 r4 .  .  y4 y4 w12 w12 w12 w12 w12 w12 w12 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
+  'w11 w11 r4 r4 r4 r4 .  .  y4 y4 w12 w12 w12 w12 w12 w12 w12 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
+  'w11 w11 r4 r4 r4 r4 .  .  y4 y4 w12 w12 w12 w12 w12 w12 w12 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
+  'w11 w11 r4 r4 r4 r4 .  .  y4 y4 w12 w12 w12 w12 w12 w12 w12 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
+  'w11 w11 r4 r4 r4 r4 .  .  y4 y4 w12 w12 w12 w12 w12 w12 w12 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
+  'w11 w11 .  .  .  .  .  .  y4 y4 r5 r5 r5 r5 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
+  ' .   .  .  .  .  .  .  .  y4 y4 r5 r5 r5 r5 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .'
+  ' .   .  .  .  .  .  .  .  y4 y4 r5 r5 r5 r5 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .';
+  grid-gap: 6px;
+  width: 660px;
+  height: 465px;
 
-  background: url(../mandrio.jpg) black no-repeat center center / contain;
+  background: url(../mandrio.jpg) black no-repeat center center / 103%;
 }
 
 section {
-  border: 1px solid black;
+  padding: 3px;
+
+  border: 1px solid red;
 }
 
 /* WHITE ZONES (16) ---------------------------------------------------------------------- */
@@ -182,7 +185,7 @@ section {
 }
 
 #zone17, #zone18, #zone19, #zone20, #zone21 {
-  background-color: #d1d0ca;
+  background-color: #f1bf10;
 }
 
 #zone22, #zone23, #zone24, #zone25 {

@@ -168,3 +168,23 @@ main {
 #zone30 {
   grid-area: r5;
 }
+
+/* COLORS ---------------------------------------------------------------------- */
+#zone1, #zone2, #zone3, #zone4, 
+#zone5, #zone6, #zone7, #zone8, 
+#zone9, #zone10, #zone11, #zone12, 
+#zone13, #zone14, #zone15, #zone16 {
+  background-color: #ededed;
+}
+
+#zone17, #zone18, #zone19, #zone20, #zone21 {
+  background-color: #d1d0ca;
+}
+
+#zone22, #zone23, #zone24, #zone25 {
+  background-color: #11016c;
+}
+
+#zone26, #zone27, #zone28, #zone29, #zone30 {
+  background-color: #c50301;
+}

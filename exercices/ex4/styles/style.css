@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 header {
   width: 100%;
   height: 80px;
@@ -17,28 +21,28 @@ main {
   margin: auto;
   display: grid;
   grid-template-areas:
-  'w1 w1   w2  w2  w2  w2  w2  w2  w2 w2 w2 w2 w2 w2 w3  w3  w3  w3  w3  w3  w3  w3  w3  w3  w3  w3 w3  w3  w4 w4  y1  y1'
-  'w1 w1   b1  b1  b1  b1  b1  b1  b1 b1 b1 b1 b1 b1 w5  w5  w5  w5  w5  b2  b2  b2  b2  b2  b2  b2 b2  b2  w4 w4  y1  y1'
-  'w1 w1   b1  b1  b1  b1  b1  b1  b1 b1 b1 b1 b1 b1 w5  w5  w5  w5  w5  b2  b2  b2  b2  b2  b2  b2 b2  b2  w4 w4  y1  y1'
-  'w1 w1   b1  b1  b1  b1  b1  b1  b1 b1 b1 b1 b1 b1 w5  w5  w5  w5  w5  b2  b2  b2  b2  b2  b2  b2 b2  b2  w4 w4  y1  y1'
-  '.  .    w6  w6  w6  w6  .   .   w7 w7 w7 w7 w8 w8 y2  y2  y2  y2  y2  r1  r1  r1  r1  r1  r1  r1 r2  r2  w4 w4  y1  y1'
-  '.  .    w6  w6  w6  w6  .   .   w7 w7 w7 w7 w8 w8 y2  y2  y2  y2  y2  r1  r1  r1  r1  r1  r1  r1 r2  r2  w4 w4  y1  y1'
-  '.  .    w6  w6  w6  w6  .   .   w7 w7 w7 w7 w8 w8 y2  y2  y2  y2  y2  r1  r1  r1  r1  r1  r1  r1 r2  r2  w4 w4  y1  y1'
-  '.  .    w6  w6  w6  w6  .   .   w7 w7 w7 w7 w8 w8 y2  y2  y2  y2  y2  r1  r1  r1  r1  r1  r1  r1 r2  r2  w4 w4  y1  y1'
-  '.  .    w6  w6  w6  w6  .   .   w7 w7 w7 w7 w8 w8 y2  y2  y2  y2  y2  r1  r1  r1  r1  r1  r1  r1 r2  r2  w4 w4  y1  y1'
-  '.  .    w6  w6  w6  w6  .   .   w7 w7 w7 w7 w8 w8 y2  y2  y2  y2  y2  r1  r1  r1  r1  r1  r1  r1 r2  r2  w4 w4  y1  y1'
-  '.  .    w6  w6  w6  w6  .   .   y3 y3 r3 r3 r3 r3 b3  b3  b3  b3  b3  w9  w9  w9  w9  w9  w9  w9 w10 w10 .   .   .   .'
-  '.  .    w6  w6  w6  w6  .   .   y3 y3 r3 r3 r3 r3 b3  b3  b3  b3  b3  w9  w9  w9  w9  w9  w9  w9 w10 w10 .   .   .   .'
-  '.  .    w6  w6  w6  w6  .   .   y3 y3 r3 r3 r3 r3 b3  b3  b3  b3  b3  w9  w9  w9  w9  w9  w9  w9 w10 w10 .   .   .   .'
-  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4  b4 b4  y5  y5 w14 w14 w14 w14'
-  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4  b4 b4  y5  y5 w14 w14 w14 w14'
-  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4  b4 b4  y5  y5 w14 w14 w14 w14'
-  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4  b4 b4  y5  y5 w14 w14 w14 w14'
-  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4  b4 b4  y5  y5 w14 w14 w14 w14'
-  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4  b4 b4  y5  y5 w14 w14 w14 w14'
-  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 r5 r5 r5 r5 .   .   .   .   .   .   .   .   .   .   w16 w16 w16 w16 w16 w16 w16 w16'
-  'w15 w15 w15 w15 w15 w15 w15 w15 y4 y4 r5 r5 r5 r5 .   .   .   .   .   .   .   .   .   .   w16 w16 w16 w16 w16 w16 w16 w16'
-  'w15 w15 w15 w15 w15 w15 w15 w15 y4 y4 r5 r5 r5 r5 .   .   .   .   .   .   .   .   .   .   w16 w16 w16 w16 w16 w16 w16 w16';
+  'w1  w1  w2  w2  w2  w2  w2  w2  w2 w2 w2  w2  w2  w2  w3  w3  w3  w3  w3  w3  w3  w3  w3  w3 w3  w3  w3  w3  w4  w4  y1  y1'
+  'w1  w1  b1  b1  b1  b1  b1  b1  b1 b1 b1  b1  b1  b1  w5  w5  w5  w5  w5  b2  b2  b2  b2  b2 b2  b2  b2  b2  w4  w4  y1  y1'
+  'w1  w1  b1  b1  b1  b1  b1  b1  b1 b1 b1  b1  b1  b1  w5  w5  w5  w5  w5  b2  b2  b2  b2  b2 b2  b2  b2  b2  w4  w4  y1  y1'
+  'w1  w1  b1  b1  b1  b1  b1  b1  b1 b1 b1  b1  b1  b1  w5  w5  w5  w5  w5  b2  b2  b2  b2  b2 b2  b2  b2  b2  w4  w4  y1  y1'
+  '.   .   w6  w6  w6  w6  .   .   w7 w7 w7  w7  w8  w8  y2  y2  y2  y2  y2  r1  r1  r1  r1  r1 r1  r1  r2  r2  w4  w4  y1  y1'
+  '.   .   w6  w6  w6  w6  .   .   w7 w7 w7  w7  w8  w8  y2  y2  y2  y2  y2  r1  r1  r1  r1  r1 r1  r1  r2  r2  w4  w4  y1  y1'
+  '.   .   w6  w6  w6  w6  .   .   w7 w7 w7  w7  w8  w8  y2  y2  y2  y2  y2  r1  r1  r1  r1  r1 r1  r1  r2  r2  w4  w4  y1  y1'
+  '.   .   w6  w6  w6  w6  .   .   w7 w7 w7  w7  w8  w8  y2  y2  y2  y2  y2  r1  r1  r1  r1  r1 r1  r1  r2  r2  w4  w4  y1  y1'
+  '.   .   w6  w6  w6  w6  .   .   w7 w7 w7  w7  w8  w8  y2  y2  y2  y2  y2  r1  r1  r1  r1  r1 r1  r1  r2  r2  w4  w4  y1  y1'
+  '.   .   w6  w6  w6  w6  .   .   w7 w7 w7  w7  w8  w8  y2  y2  y2  y2  y2  r1  r1  r1  r1  r1 r1  r1  r2  r2  w4  w4  y1  y1'
+  '.   .   w6  w6  w6  w6  .   .   y3 y3 r3  r3  r3  r3  b3  b3  b3  b3  b3  w9  w9  w9  w9  w9 w9  w9  w10 w10 .   .   .   .'
+  '.   .   w6  w6  w6  w6  .   .   y3 y3 r3  r3  r3  r3  b3  b3  b3  b3  b3  w9  w9  w9  w9  w9 w9  w9  w10 w10 .   .   .   .'
+  '.   .   w6  w6  w6  w6  .   .   y3 y3 r3  r3  r3  r3  b3  b3  b3  b3  b3  w9  w9  w9  w9  w9 w9  w9  w10 w10 .   .   .   .'
+  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4 b4  b4  y5  y5  w14 w14 w14 w14'
+  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4 b4  b4  y5  y5  w14 w14 w14 w14'
+  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4 b4  b4  y5  y5  w14 w14 w14 w14'
+  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4 b4  b4  y5  y5  w14 w14 w14 w14'
+  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4 b4  b4  y5  y5  w14 w14 w14 w14'
+  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4 b4  b4  y5  y5  w14 w14 w14 w14'
+  'w11 w11 r4  r4  r4  r4  .   .   y4 y4 r5  r5  r5  r5  .   .   .   .   .   .   .   .   .   .  w16 w16 w16 w16 w16 w16 w16 w16'
+  'w15 w15 w15 w15 w15 w15 w15 w15 y4 y4 r5  r5  r5  r5  .   .   .   .   .   .   .   .   .   .  w16 w16 w16 w16 w16 w16 w16 w16'
+  'w15 w15 w15 w15 w15 w15 w15 w15 y4 y4 r5  r5  r5  r5  .   .   .   .   .   .   .   .   .   .  w16 w16 w16 w16 w16 w16 w16 w16';
   grid-gap: 6px;
   width: 660px;
   height: 465px;
@@ -50,6 +54,26 @@ main {
 
 section {
   padding: 3px;
+}
+
+/* COLORS ---------------------------------------------------------------------- */
+#zone1, #zone2, #zone3, #zone4, 
+#zone5, #zone6, #zone7, #zone8, 
+#zone9, #zone10, #zone11, #zone12, 
+#zone13, #zone14, #zone15, #zone16 {
+  background-color: #ededed;
+}
+
+#zone17, #zone18, #zone19, #zone20, #zone21 {
+  background-color: #f1bf10;
+}
+
+#zone22, #zone23, #zone24, #zone25 {
+  background-color: #11016c;
+}
+
+#zone26, #zone27, #zone28, #zone29, #zone30 {
+  background-color: #c50301;
 }
 
 /* WHITE ZONES (16) ---------------------------------------------------------------------- */
@@ -176,22 +200,53 @@ section {
   grid-area: r5;
 }
 
-/* COLORS ---------------------------------------------------------------------- */
-#zone1, #zone2, #zone3, #zone4, 
-#zone5, #zone6, #zone7, #zone8, 
-#zone9, #zone10, #zone11, #zone12, 
-#zone13, #zone14, #zone15, #zone16 {
-  background-color: #ededed;
+/* BUTTON ---------------------------------------------------------------------- */
+button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: cadetblue;
+
+  color: white;
+  font: bold 20px helvetica;
+  text-align: center;
+
+  cursor: pointer;
+  transition: background-color .25s ease;
 }
 
-#zone17, #zone18, #zone19, #zone20, #zone21 {
-  background-color: #f1bf10;
+button:hover {
+  background-color: black;
 }
 
-#zone22, #zone23, #zone24, #zone25 {
-  background-color: #11016c;
+/* FOOTER ---------------------------------------------------------------------- */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+
+  background-color: cadetblue;
+
+  color: white;
+  font: normal 14px helvetica, arial, sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 2;
 }
 
-#zone26, #zone27, #zone28, #zone29, #zone30 {
-  background-color: #c50301;
+/* BONUS ---------------------------------------------------------------------- */
+@keyframes groovy {
+  0% {
+    filter: hue-rotate(0);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }

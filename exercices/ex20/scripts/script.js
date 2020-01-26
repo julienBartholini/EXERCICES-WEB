@@ -1,7 +1,7 @@
 function openCarteInfos() {
-  if (opacityCart < 1) {
-    opacityCart += .1;
-    carteInfos.style.opacity = opacityCart;
+  if (opacityCard < 1) {
+    opacityCard += .05;
+    carteInfos.style.opacity = opacityCard;
     requestAnimationFrame(openCarteInfos);
   } else {
     cancelAnimationFrame(requestAnimationFrame(closeCarteInfos));
@@ -9,9 +9,9 @@ function openCarteInfos() {
 }
 
 function closeCarteInfos() {
-  if (opacityCart > 0) {
-    opacityCart -= .1;
-    carteInfos.style.opacity = opacityCart;
+  if (opacityCard > 0) {
+    opacityCard -= .05;
+    carteInfos.style.opacity = opacityCard;
     requestAnimationFrame(closeCarteInfos);
   } else {
     carteInfos.style.display = 'none';
@@ -19,9 +19,10 @@ function closeCarteInfos() {
   }
 }
 
-let opacityCart = 0;
+let opacityCard = 0;
 
-const btnInfos = document.querySelector('#btnInfos'),
+const audio = document.querySelector('audio'),
+    btnInfos = document.querySelector('#btnInfos'),
     carteInfos = document.querySelector('#carteInfos'),
     btnFermer = document.querySelector('#btnFermer');
 

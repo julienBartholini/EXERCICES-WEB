@@ -17,7 +17,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 30px;
     
@@ -26,6 +26,8 @@ footer {
     color: silver;
     font: normal 14px helvetica;
     letter-spacing: 1px;
+
+    z-index: 100;
 }
 
 header {
@@ -52,18 +54,26 @@ section {
     width: 1168px;
     height: 500px;
 
-    background: url(../imgs/bgtest.jpg) no-repeat center center / cover;
+    background: url(../imgs/bgtest02.jpg) no-repeat center center / contain;
+
+    opacity: 0;
+    animation: ouverture 3s 1s ease forwards;
 }
 
 h1 {
     font: bold 100px helvetica;
     text-align: center;
     text-shadow: 0 0 20px oldlace,
-        20px 10px 50px oldlace;
+        0 0 50px black;
+    line-height: .6;
 
     filter: blur(1px);
-    opacity: .5;
-    animation: wiggles 1s linear infinite;
+    opacity: .8;
+    animation: wiggles .5s linear infinite;
+}
+
+h1 span {
+    font-size: 50px;
 }
 
 #sectionIntro ul {
@@ -76,7 +86,6 @@ h1 {
 
 #sectionIntro li {
     cursor: pointer;
-    filter: blur(1px);
     transition: letter-spacing .2s ease;
 }
 
@@ -101,7 +110,7 @@ h1 {
     width: 575px;
     height: 575px;
 
-    background-color: rgba(253, 245, 230, .75);
+    background-color: rgba(253, 245, 230, .9);
 
     opacity: 0;
 }
@@ -110,9 +119,9 @@ h1 {
     width: 100%;
     height: 110px;
 
-    background: url(../imgs/bandeauInfos.jpg) no-repeat center center / cover;
+    background: url(../imgs/bgtest.jpg) no-repeat center center / cover;
 
-    opacity: .75;
+    opacity: .85;
 }
 
 #carteInfos p {
@@ -142,6 +151,7 @@ h1 {
     font: bold 15px helvetica;
     letter-spacing: 2px;
 
+    opacity: .85;
     cursor: pointer;
     transition: letter-spacing .2s ease;
 }
@@ -152,6 +162,14 @@ h1 {
 
 footer {
     bottom: 0;
+}
+
+@keyframes ouverture {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
 }
 
 @keyframes wiggles {

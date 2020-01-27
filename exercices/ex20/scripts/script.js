@@ -16,6 +16,9 @@ function closeIntro() {
   } else {
     sectionIntro.style.display = 'none';
     cancelAnimationFrame(requestAnimationFrame(closeIntro));
+    sectionReveil.style.display = 'flex';
+    sectionReveil.style.animation = 'ouverture 3s ease forwards';
+    requestAnimationFrame(openReveil);
   }
 }
 
@@ -40,15 +43,38 @@ function closeCarteInfos() {
   }
 }
 
+function openReveil() {
+  if (opacityReveil < 1) {
+    opacityReveil += .01;
+    sectionReveil.style.opacity = opacityReveil;
+    requestAnimationFrame(openReveil);
+  } else {
+    cancelAnimationFrame(requestAnimationFrame(openReveil));
+  }
+}
+
+function closeReveil() {
+  if (opacityReveil > 0) {
+    opacityReveil -= .01;
+    sectionReveil.style.opacity = opacityReveil;
+    requestAnimationFrame(closeReveil);
+  } else {
+    cancelAnimationFrame(requestAnimationFrame(openReveil));
+  }
+}
+
 let opacityCard = 0,
-    opacityIntro = 0;
+    opacityIntro = 0,
+    opacityReveil = 0;
 
 const audio = document.querySelector('audio'),
     btnCommencer = document.querySelector('#btnCommencer'),
     btnInfos = document.querySelector('#btnInfos'),
     sectionIntro = document.querySelector('#sectionIntro'),
     carteInfos = document.querySelector('#carteInfos'),
-    btnFermer = document.querySelector('#btnFermer');
+    btnFermer = document.querySelector('#btnFermer'),
+    sectionReveil = document.querySelector('#sectionReveil'),
+    btnSuivant = document.querySelector('#btnSuivant');
 
 requestAnimationFrame(openIntro);
 
@@ -68,4 +94,8 @@ btnInfos.addEventListener('click', function () {
 btnFermer.addEventListener('click', function () {
   audio.play();
   requestAnimationFrame(closeCarteInfos);
+});
+
+btnSuivant.addEventListener('click', function () {
+  requestAnimationFrame(closeReveil);
 });

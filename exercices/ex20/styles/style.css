@@ -57,7 +57,7 @@ section {
     background: url(../imgs/bgtest02.jpg) no-repeat center center / contain;
 
     opacity: 0;
-    animation: ouverture 3s 1s ease forwards;
+    animation: ouverture 3s ease forwards;*/
 }
 
 h1 {
@@ -117,7 +117,7 @@ h1 span {
     width: 100%;
     height: 150px;
 
-    background: url(../imgs/bgtest.jpg) no-repeat center center / cover;
+    background: url(../imgs/bandeau_infos.jpg) no-repeat center center / cover;
 
     opacity: .85;
 }
@@ -165,10 +165,8 @@ footer {
 @keyframes ouverture {
     0% {
         filter: blur(5px) contrast(5);
-        opacity: 0;
     } 100% {
         filter: blur(0) contrast(1);
-        opacity: 1;
     }
 }
 

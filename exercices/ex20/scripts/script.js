@@ -81,11 +81,12 @@ const audio = document.querySelector('audio'),
     sectionLieu = document.querySelector('#sectionLieu'),
 
     // ORIENTE OBJET, JUJU !!! ;^)
-    lieux = [],
-    armes = [],
-    survivants = [],
-    realites = [],
-    monstres = [];
+    lieux = ['rue', 'sanitorium', 'theatre', 'ecole', 'alchemia', 'woodside', 'lakeview', 'parc', 'prisonlac', 'egouts'],
+    armesBlch = ['baton', 'barre', 'clefanglaise', 'marteau'],
+    armesFeu = ['pistolet', 'fusil', 'carabine', 'colt'],
+    survivants = ['travis', 'harry', 'cybil', 'james', 'maria', 'laura', 'heather', 'douglas', 'henry', 'eileen'],
+    realites = ['normal', 'enfer'],
+    monstres = ['mumbler', 'airscreamer', 'lyingfigure', 'nurse', 'scraper', 'rubberface', 'ariel', 'twoback', 'pyramid', 'walter'];
 
 requestAnimationFrame(openIntro);
 

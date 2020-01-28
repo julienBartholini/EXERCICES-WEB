@@ -60,21 +60,32 @@ function closeReveil() {
     requestAnimationFrame(closeReveil);
   } else {
     cancelAnimationFrame(requestAnimationFrame(openReveil));
+    sectionReveil.style.display = 'none';
+    sectionLieu.style.display = 'block';
   }
 }
 
 let opacityCard = 0,
     opacityIntro = 0,
-    opacityReveil = 0;
+    opacityReveil = 0,
+    eltsScenario = [];
 
 const audio = document.querySelector('audio'),
+    sectionIntro = document.querySelector('#sectionIntro'),
     btnCommencer = document.querySelector('#btnCommencer'),
     btnInfos = document.querySelector('#btnInfos'),
-    sectionIntro = document.querySelector('#sectionIntro'),
     carteInfos = document.querySelector('#carteInfos'),
     btnFermer = document.querySelector('#btnFermer'),
     sectionReveil = document.querySelector('#sectionReveil'),
-    btnSuivant = document.querySelector('#btnSuivant');
+    btnSuivant = document.querySelector('#btnSuivant'),
+    sectionLieu = document.querySelector('#sectionLieu'),
+
+    // ORIENTE OBJET, JUJU !!! ;^)
+    lieux = [],
+    armes = [],
+    survivants = [],
+    realites = [],
+    monstres = [];
 
 requestAnimationFrame(openIntro);
 

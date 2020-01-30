@@ -61,7 +61,6 @@ article {
   width: 500px;
   height: 500px;
 
-  
   box-shadow: 0 0 200px inset rgba(0, 0, 0, .15);
 }
 
@@ -72,6 +71,24 @@ h2 {
   background-color: cadetblue;
 
   color: white;
+}
+
+article section {
+  position: relative;
+  width: 100%;
+  height: 460px;
+}
+
+#exo_carre div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+
+  border-radius: 20px;
+
+  animation: carre 3s linear alternate infinite;
 }
 
 footer {
@@ -86,4 +103,14 @@ footer {
   font-size: 14px;
   text-align: center;
   letter-spacing: 1px;
+}
+
+@keyframes carre {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+    background-color: orange;
+  } to {
+    transform: translate(-50%, -50%) rotate(360deg);
+    background-color: red;
+  }
 }

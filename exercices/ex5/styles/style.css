@@ -5,15 +5,73 @@
 
   color: cadetblue;
   font-family: helvetica;
+  font-weight: normal;
 }
 
 header {
-  padding: 20px 0;
+  padding: 20px 0 50px 0;
   width: 100%;
 }
 
 h1 {
   text-align: center;
+  letter-spacing: 2px;
+}
+
+main {
+  margin: auto;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+nav {
+  margin-top: 10px;
+  padding-top: 10px;
+  width: 150px;
+  height: 40px;
+
+  border-radius: 0 0 5px 5px;
+
+  background-color: cadetblue;
+
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+  transition: height .5s ease;
+}
+
+nav:hover {
+  height: 500px;
+}
+
+main > div {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+article {
+  margin: 10px;
+  width: 500px;
+  height: 500px;
+
+  
+  box-shadow: 0 0 200px inset rgba(0, 0, 0, .15);
+}
+
+h2 {
+  text-align: center;
+  line-height: 1.65;
+
+  background-color: cadetblue;
+
+  color: white;
 }
 
 footer {

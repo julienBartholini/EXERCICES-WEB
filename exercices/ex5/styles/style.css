@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  color: cadetblue;
+  font-family: helvetica;
+}
+
+header {
+  padding: 20px 0;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  padding: 5px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  background-color: cadetblue;
+
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1px;
+}

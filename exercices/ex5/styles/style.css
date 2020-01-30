@@ -79,7 +79,7 @@ article section {
   height: 460px;
 }
 
-#exo_carre div {
+#carre {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -89,6 +89,36 @@ article section {
   border-radius: 20px;
 
   animation: carre 3s linear alternate infinite;
+}
+
+#eprouvette {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 300px;
+
+  border: solid cadetblue;
+  border-width: 0 2px 2px 2px;
+  border-radius: 0 0 25px 25px;
+
+  background-image: linear-gradient(to top, lightblue, transparent);
+}
+
+#balle {
+  position: relative;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 100%;
+
+  background-color: white;
+  box-shadow: 5px -5px 5px 0 inset rgba(50, 5, 0, .5),
+  5px -5px 10px 10px inset darksalmon;
+
+  animation: balle 3s ease-in infinite;
 }
 
 footer {
@@ -112,5 +142,101 @@ footer {
   } to {
     transform: translate(-50%, -50%) rotate(360deg);
     background-color: red;
+  }
+}
+
+@keyframes balle {
+  0% {
+    opacity: 0;
+    top: 0;
+  } 5% {
+    top: 0;
+    opacity: 1;
+  } 10% {
+    top: 255px;
+    width: 40px;
+    height: 40px;
+  } 10.4% {
+    top: 230px;
+    width: 45px;
+    height: 35px;
+  } 12% {
+    top: 100px;
+    width: 30px;
+    height: 45px;
+  } 14% {
+    top: 95px;
+    width: 30px;
+    height: 45px;
+  } 17% {
+    top: 255px;
+    width: 30px;
+    height: 45px;
+  } 17.25% {
+    top: 260px;
+    width: 45px;
+    height: 30px;
+  } 19% {
+    top: 150px;
+    width: 35px;
+    height: 43px;
+  } 19.15% {
+    top: 145px;
+    width: 35px;
+    height: 43px;
+  } 22% {
+    top: 255px;
+    width: 35px;
+    height: 43px;
+  } 22.1% {
+    top: 260px;
+    width: 45px;
+    height: 30px;
+  } 24% {
+    top: 190px;
+    width: 37px;
+    height: 42px;
+  } 26% {
+    top: 255px;
+    width: 37px;
+    height: 42px;
+  } 28% {
+    top: 200px;
+    width: 39px;
+    height: 41px;
+  } 30% {
+    top: 255px;
+    width: 39px;
+    height: 41px;
+  } 32% {
+    top: 240px;
+    width: 40px;
+    height: 40px;
+  } 33% {
+    top: 255px;
+    width: 40px;
+    height: 40px;
+  } 33.7 {
+    top: 245px;
+    width: 40px;
+    height: 40px;
+  } 34.2% {
+    top: 255px;
+    width: 40px;
+    height: 40px;
+  } 34.5% {
+    top: 250px;
+    width: 40px;
+    height: 40px;
+  } 34.6% {
+    top: 255px;
+    width: 40px;
+    height: 40px;
+  } 50% {
+    top: 255px;
+    opacity: 1;
+  } 90%, 100% {
+    top: 255px;
+    opacity: 0;
   }
 }

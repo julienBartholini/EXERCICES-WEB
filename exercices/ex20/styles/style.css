@@ -208,6 +208,24 @@ h1 span {
   animation: respiration 5s ease infinite, ouverture 3s ease forwards;
 }
 
+#btn {
+  padding: 20px 30px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: none;
+  border-radius: 3px;
+
+  background-color: rgba(125, 0, 0, .5);
+
+  opacity: 0;
+  cursor: pointer;
+  animation: btn 2s ease forwards;
+}
+
 footer {
   bottom: 0;
 }
@@ -222,22 +240,30 @@ footer {
 
 @keyframes wiggles {
   0%, 50%, 100% {
-      transform: translate(0, 0);
+    transform: translate(0, 0);
   } 10%, 90% {
-      transform: translate(1px, 2px);
+    transform: translate(1px, 2px);
   } 20%, 80% {
-      transform: translate(0px, -2px);
+    transform: translate(0px, -2px);
   } 30%, 60% {
-      transform: translate(-1px, 0);
+    transform: translate(-1px, 0);
   } 40%, 70% {
-      transform: translate(0, 1px);
+    transform: translate(0, 1px);
   }
 }
 
 @keyframes respiration {
   0%, 100% {
-      transform: translate(0, 10px);
+    transform: translate(0, 10px);
   } 50% {
-      transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes btn {
+  0% {
+    opacity: 0;
+  } 100% {
+    opacity: 1;
   }
 }

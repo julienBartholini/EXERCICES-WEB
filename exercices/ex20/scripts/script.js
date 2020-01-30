@@ -1,3 +1,13 @@
+function btn() {
+  if (compteur !== 5) {
+    console.log(compteur);
+    compteur = compteur + 1;
+  } else {
+    btnLieu.style.display = 'block';
+    clearInterval(setInterval(btn, 1000));
+  }
+}
+
 function openIntro() {
   if (opacityIntro < 1) {
     opacityIntro += .01;
@@ -62,13 +72,15 @@ function closeReveil() {
     cancelAnimationFrame(requestAnimationFrame(openReveil));
     sectionReveil.style.display = 'none';
     sectionLieu.style.display = 'block';
+    setInterval(btn, 1000);
   }
 }
 
 let opacityCard = 0,
     opacityIntro = 0,
     opacityReveil = 0,
-    eltsScenario = [];
+    eltsScenario = [],
+    compteur = 0;
 
 const audio = document.querySelector('audio'),
     sectionIntro = document.querySelector('#sectionIntro'),
@@ -79,6 +91,7 @@ const audio = document.querySelector('audio'),
     sectionReveil = document.querySelector('#sectionReveil'),
     btnSuivant = document.querySelector('#btnSuivant'),
     sectionLieu = document.querySelector('#sectionLieu'),
+    btnLieu = document.querySelector('#btn'),
 
     // ORIENTE OBJET, JUJU !!! ;^)
     lieux = ['rue', 'sanitorium', 'theatre', 'ecole', 'alchemia', 'woodside', 'lakeview', 'parc', 'prisonlac', 'egouts'],
@@ -86,7 +99,9 @@ const audio = document.querySelector('audio'),
     armesFeu = ['pistolet', 'fusil', 'carabine', 'colt'],
     survivants = ['travis', 'harry', 'cybil', 'james', 'maria', 'laura', 'heather', 'douglas', 'henry', 'eileen'],
     realites = ['normal', 'enfer'],
-    monstres = ['mumbler', 'airscreamer', 'lyingfigure', 'nurse', 'scraper', 'rubberface', 'ariel', 'twoback', 'pyramid', 'walter'];
+    monstres = ['mumbler', 'airscreamer', 'lyingfigure', 'nurse', 'scraper', 'rubberface', 'ariel', 'twoback', 'pyramid', 'walter'],
+
+    btnsSuivantText = ['Où suis-je ?', 'Qui êtes-vous ?', 'Que ce passe t-il ?', "Mais qu'est ce que ?..."];
 
 requestAnimationFrame(openIntro);
 

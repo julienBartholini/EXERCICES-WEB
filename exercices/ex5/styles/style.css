@@ -121,6 +121,33 @@ article section {
   animation: balle 3s ease-in infinite;
 }
 
+#container_points {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#container_points * {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 100%;
+
+  background-color: black;
+
+  animation: loader 2s ease infinite;
+}
+
+#point_load2 {
+  animation-delay: .5s;
+}
+
+#point_load3 {
+  animation-delay: 1s;
+}
+
 footer {
   padding: 5px 0;
   position: fixed;
@@ -151,8 +178,9 @@ footer {
     top: 0;
   } 5% {
     top: 0;
+  } 8.5% {
     opacity: 1;
-  } 10% {
+  } 10%, 33%, 34.2%, 34.6% {
     top: 255px;
     width: 40px;
     height: 40px;
@@ -212,24 +240,12 @@ footer {
     top: 240px;
     width: 40px;
     height: 40px;
-  } 33% {
-    top: 255px;
-    width: 40px;
-    height: 40px;
-  } 33.7 {
+  } 33.7% {
     top: 245px;
-    width: 40px;
-    height: 40px;
-  } 34.2% {
-    top: 255px;
     width: 40px;
     height: 40px;
   } 34.5% {
     top: 250px;
-    width: 40px;
-    height: 40px;
-  } 34.6% {
-    top: 255px;
     width: 40px;
     height: 40px;
   } 50% {
@@ -238,5 +254,15 @@ footer {
   } 90%, 100% {
     top: 255px;
     opacity: 0;
+  }
+}
+
+@keyframes loader {
+  from {
+    background-color: dodgerblue;
+    box-shadow: 0 0 0 0 inset white;
+  } to {
+    box-shadow: 0 0 50px 0 inset white;
+    background-color: white;
   }
 }

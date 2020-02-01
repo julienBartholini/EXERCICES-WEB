@@ -139,8 +139,6 @@ nav:hover {
 
   border-radius: 100%;
 
-  background-color: black;
-
   animation: loader 2s ease infinite;
 }
 
@@ -152,6 +150,62 @@ nav:hover {
   animation-delay: 1s;
 }
 
+/* FAIRE LA QUEUE ---------------------------------------------------------------------- */
+#container_objs {
+  margin: 10px;
+}
+
+#container_objs * {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 5px;
+
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2.5;
+
+  animation: laQueue 6s ease infinite;
+}
+
+#obj1,
+#obj3,
+#obj5 {
+  background-color: coral;
+}
+
+#obj2,
+#obj4,
+#obj6 {
+  background-color: cadetblue;
+}
+
+#obj1 {
+  animation-delay: .6s;
+}
+
+#obj2 {
+  animation-delay: 1.2s;
+}
+
+#obj3 {
+  animation-delay: 1.8s;
+}
+
+#obj4 {
+  animation-delay: 2.4s;
+}
+
+#obj5 {
+  animation-delay: 3s;
+}
+
+#obj6 {
+  animation-delay: 3.6s;
+}
 
 /* FOOTER (Signature + Infos) ---------------------------------------------------------------------- */
 footer {
@@ -275,5 +329,22 @@ footer {
   } to {
     box-shadow: 0 0 50px 0 inset white;
     background-color: white;
+  }
+}
+
+/* ANIM: FAIRE LA QUEUE ---------------------------------------------------------------------- */
+@keyframes laQueue {
+  0%, 100% {
+    top: 0;
+    left: 0;
+  } 25% {
+    top: 410px;
+    left: 0;
+  } 50% {
+    top: 410px;
+    left: 450px;
+  } 75% {
+    top: 0;
+    left: 450px;
   }
 }

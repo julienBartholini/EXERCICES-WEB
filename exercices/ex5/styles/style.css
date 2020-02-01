@@ -18,6 +18,15 @@ h1 {
   letter-spacing: 2px;
 }
 
+h2 {
+  text-align: center;
+  line-height: 1.65;
+
+  background-color: cadetblue;
+
+  color: white;
+}
+
 main {
   margin: auto;
   margin-bottom: 40px;
@@ -26,6 +35,28 @@ main {
   width: 90%;
 }
 
+main > div {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+article {
+  margin: 10px;
+  width: 500px;
+  height: 500px;
+
+  box-shadow: 0 0 200px inset rgba(0, 0, 0, .15);
+}
+
+article section {
+  position: relative;
+  width: 100%;
+  height: 460px;
+}
+
+/* MENU REACTIF ---------------------------------------------------------------------- */
 nav {
   margin-top: 10px;
   padding-top: 10px;
@@ -49,36 +80,7 @@ nav:hover {
   height: 500px;
 }
 
-main > div {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
-article {
-  margin: 10px;
-  width: 500px;
-  height: 500px;
-
-  box-shadow: 0 0 200px inset rgba(0, 0, 0, .15);
-}
-
-h2 {
-  text-align: center;
-  line-height: 1.65;
-
-  background-color: cadetblue;
-
-  color: white;
-}
-
-article section {
-  position: relative;
-  width: 100%;
-  height: 460px;
-}
-
+/* CARRE TOURNANT ---------------------------------------------------------------------- */
 #carre {
   position: absolute;
   top: 50%;
@@ -91,6 +93,7 @@ article section {
   animation: carre 3s linear alternate infinite;
 }
 
+/* BALLE REBONDISSANTE ---------------------------------------------------------------------- */
 #eprouvette {
   position: absolute;
   top: 50%;
@@ -121,6 +124,7 @@ article section {
   animation: balle 3s ease-in infinite;
 }
 
+/* LOADER ---------------------------------------------------------------------- */
 #container_points {
   position: absolute;
   top: 50%;
@@ -148,6 +152,8 @@ article section {
   animation-delay: 1s;
 }
 
+
+/* FOOTER (Signature + Infos) ---------------------------------------------------------------------- */
 footer {
   padding: 5px 0;
   position: fixed;
@@ -162,6 +168,9 @@ footer {
   letter-spacing: 1px;
 }
 
+/* ANIMATIONS ---------------------------------------------------------------------- */
+
+/* ANIM: CARRE TOURNANT ---------------------------------------------------------------------- */
 @keyframes carre {
   from {
     transform: translate(-50%, -50%) rotate(0);
@@ -172,6 +181,7 @@ footer {
   }
 }
 
+/* ANIM: BALLE REBONDISSANTE ---------------------------------------------------------------------- */
 @keyframes balle {
   0% {
     opacity: 0;
@@ -257,6 +267,7 @@ footer {
   }
 }
 
+/* ANIM: LOADER ---------------------------------------------------------------------- */
 @keyframes loader {
   from {
     background-color: dodgerblue;

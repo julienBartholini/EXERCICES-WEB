@@ -207,6 +207,50 @@ nav:hover {
   animation-delay: 3.6s;
 }
 
+/* ANIMATION 3D ---------------------------------------------------------------------- */
+#carrousel {
+  margin: 2%;
+
+  width: 96%;
+  height: 96%;
+}
+
+#carrouselElt1 {
+  
+}
+
+#carrouselElt2 {
+  
+}
+
+#carrouselElt3 {
+  
+}
+
+#carrouselElt4 {
+  
+}
+
+#carrouselElt5 {
+  
+}
+
+#carrouselElt6 {
+  
+}
+
+#carrouselElt7 {
+  
+}
+
+#carrouselElt8 {
+  
+}
+
+#carrouselElt9 {
+  
+}
+
 /* FOOTER (Signature + Infos) ---------------------------------------------------------------------- */
 footer {
   padding: 5px 0;
@@ -334,7 +378,8 @@ footer {
 
 /* ANIM: FAIRE LA QUEUE ---------------------------------------------------------------------- */
 @keyframes laQueue {
-  0%, 100% {
+  0% {
+    transform: rotate(0);
     top: 0;
     left: 0;
   } 25% {
@@ -346,5 +391,9 @@ footer {
   } 75% {
     top: 0;
     left: 450px;
+  } 100% {
+    transform: rotate(360deg);
+    top: 0;
+    left: 0;
   }
 }

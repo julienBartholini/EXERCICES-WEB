@@ -8,23 +8,22 @@
   font-weight: normal;
 }
 
-header {
-  padding: 20px 0 50px 0;
-  width: 100%;
-}
-
 h1 {
   text-align: center;
   letter-spacing: 2px;
 }
 
 h2 {
-  text-align: center;
-  line-height: 1.65;
-
   background-color: cadetblue;
 
   color: white;
+  text-align: center;
+  line-height: 1.65;
+}
+
+header {
+  padding: 20px 0 50px 0;
+  width: 100%;
 }
 
 main {
@@ -35,19 +34,19 @@ main {
   width: 90%;
 }
 
-main > div {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
 article {
   margin: 10px;
   width: 500px;
   height: 500px;
 
   box-shadow: 0 0 200px inset rgba(0, 0, 0, .15);
+}
+
+main > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 article section {
@@ -110,8 +109,8 @@ nav:hover {
 }
 
 #balle {
-  position: relative;
   margin: auto;
+  position: relative;
   width: 40px;
   height: 40px;
 
@@ -234,9 +233,9 @@ nav:hover {
   width: 30px;
   height: 30px;
 
-  border-radius: 100%;
+  border-radius: 20px 0;
 
-  background-color: rgba(0, 0, 0, .4);
+  background-image: linear-gradient(130deg, orange, green);
 
   color: white;
   font-size: 10px;
@@ -311,8 +310,8 @@ footer {
 /* ANIM: BALLE REBONDISSANTE ---------------------------------------------------------------------- */
 @keyframes balle {
   0% {
-    opacity: 0;
     top: 0;
+    opacity: 0;
   } 5% {
     top: 0;
   } 8.5% {
@@ -408,9 +407,9 @@ footer {
 /* ANIM: FAIRE LA QUEUE ---------------------------------------------------------------------- */
 @keyframes laQueue {
   0% {
-    transform: rotate(0);
     top: 0;
     left: 0;
+    transform: rotate(0);
   } 25% {
     top: 410px;
     left: 0;
@@ -421,9 +420,9 @@ footer {
     top: 0;
     left: 450px;
   } 100% {
-    transform: rotate(360deg);
     top: 0;
     left: 0;
+    transform: rotate(360deg);
   }
 }
 
@@ -451,3 +450,5 @@ footer {
     transform: rotateX(360deg) rotateY(360deg);
   }
 }
+
+/*--- 3-18-5-1-20-9-15-14 ---*/

@@ -208,47 +208,76 @@ nav:hover {
 }
 
 /* ANIMATION 3D ---------------------------------------------------------------------- */
-#carrousel {
-  margin: 2%;
+#container_anim3D {
+  perspective: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0, -50%);
+  width: 150px;
+  height: 150px;
 
-  width: 96%;
-  height: 96%;
+  animation: carrouselRebond 5s linear infinite;
+}
+
+#carrousel {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 20px;
+  height: 20px;
+
+  animation: carrouselRotation 3s linear infinite;
+}
+
+#carrousel * {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 100%;
+
+  background-color: rgba(0, 0, 0, .4);
+
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  line-height: 3;
 }
 
 #carrouselElt1 {
-  
+  transform: rotateY(0) translateZ(65px);
 }
 
 #carrouselElt2 {
-  
+  transform: rotateY(40deg) translateZ(65px);
 }
 
 #carrouselElt3 {
-  
+  transform: rotateY(80deg) translateZ(65px);
 }
 
 #carrouselElt4 {
-  
+  transform: rotateY(120deg) translateZ(65px);
 }
 
 #carrouselElt5 {
-  
+  transform: rotateY(160deg) translateZ(65px);
 }
 
 #carrouselElt6 {
-  
+  transform: rotateY(200deg) translateZ(65px);
 }
 
 #carrouselElt7 {
-  
+  transform: rotateY(240deg) translateZ(65px);
 }
 
 #carrouselElt8 {
-  
+  transform: rotateY(280deg) translateZ(65px);
 }
 
 #carrouselElt9 {
-  
+  transform: rotateY(320deg) translateZ(65px);
 }
 
 /* FOOTER (Signature + Infos) ---------------------------------------------------------------------- */
@@ -395,5 +424,30 @@ footer {
     transform: rotate(360deg);
     top: 0;
     left: 0;
+  }
+}
+
+/* ANIM: ANIMATION 3D ---------------------------------------------------------------------- */
+@keyframes carrouselRebond {
+  0%, 100% {
+    top: 45%;
+    left: 1%;
+  } 25% {
+    top: 16%;
+    left: 35%;
+  } 50% {
+    top: 45%;
+    left: 69%;
+  } 75% {
+    top: 75%;
+    left: 35%;
+  }
+}
+
+@keyframes carrouselRotation {
+  from {
+    transform: rotateX(0);
+  } to {
+    transform: rotateX(360deg) rotateY(360deg);
   }
 }

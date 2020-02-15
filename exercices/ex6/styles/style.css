@@ -3,7 +3,7 @@ div {
 }
 
 .col {
-  height: 100px;
+  height: 100%;
 
   border: solid 1px blue;
   border-top: solid 1px red;

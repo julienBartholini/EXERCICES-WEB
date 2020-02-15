@@ -80,7 +80,11 @@ let opacityCard = 0,
     opacityIntro = 0,
     opacityReveil = 0,
     eltsScenario = [],
-    compteur = 0;
+    compteur = 0,
+
+    // TABLEAUX DES ELTS DU SCENARIO PRE-GENERE
+    armes = [/* arme blanche */, /* arme à feu */],
+    scenarioElts = [/* lieu, arme 1er coffre, arme 2eme coffre, survivant, réalite, monstre */];
 
 const audio = document.querySelector('audio'),
     sectionIntro = document.querySelector('#sectionIntro'),
@@ -126,3 +130,7 @@ btnFermer.addEventListener('click', function () {
 btnSuivant.addEventListener('click', function () {
   requestAnimationFrame(closeReveil);
 });
+
+/*btnLieu.addEventListener('click', function () {
+
+});*/

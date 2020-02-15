@@ -1,0 +1,10 @@
+div {
+  text-align: center;
+}
+
+.col {
+  height: 100px;
+
+  border: solid 1px blue;
+  border-top: solid 1px red;
+}

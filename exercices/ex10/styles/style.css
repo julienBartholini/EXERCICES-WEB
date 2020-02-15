@@ -203,7 +203,7 @@ h1 span {
   width: 100%;
   height: 100%;
 
-  background: url(../imgs/lieux/alchemia.jpg) no-repeat center center / cover;
+  background: url(../imgs/lieux/rue.jpg) no-repeat center center / cover;
 
   animation: respiration 5s ease infinite, ouverture 3s ease forwards;
 }
@@ -226,10 +226,19 @@ h1 span {
   animation: btn 2s ease forwards;
 }
 
+#note {
+  position: absolute;
+  width: 200px;
+  height: 270px;
+
+  background: url(../imgs/papier.png) no-repeat center center / cover;
+}
+
 footer {
   bottom: 0;
 }
 
+/*----------------------------------------------------------*/
 @keyframes ouverture {
   0% {
     filter: blur(5px) contrast(5);

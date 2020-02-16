@@ -1,3 +1,7 @@
+* {
+  font-family: helvetica;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -9,7 +13,20 @@ html, body {
   box-sizing: inherit;
 }
 
+h2 {
+  margin: 0;
+  font-size: 1.25em;
+}
+
+p {
+  padding-left: 25px;
+
+  font-size: 1.25em;
+  text-align: justify;
+}
+
 .container {
+  padding: 0 10px;
   width: 100%;
 }
 
@@ -17,7 +34,7 @@ html, body {
   position: relative;
   margin-top: 15px;
   width: 100%;
-  background-color: rgba(0, 0, 0, .1);
+  /* background-color: rgba(0, 0, 0, .1); */
 }
 
 .row > * {
@@ -85,6 +102,18 @@ html, body {
 
 .col-xs-12 {
   width: calc(1200%/12);
+}
+
+.capital {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 @media screen and (min-width: 700px) {

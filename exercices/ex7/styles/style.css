@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  color: white;
+  font-family: helvetica;
+}
+
+header, footer {
+  display: none;
+}
+
+main {
+  width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  p {
+    margin: auto;
+    display: inline-block;
+
+    margin: 1% 0 1% 1%;
+    padding: 20px;
+    width: 23.5%;
+  
+    background-color: cadetblue;
+  }
+
+  p::first-letter {
+    padding-right: 2px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    display: block;
+    width: 100%;
+    height: 100px;
+
+    background-color: cadetblue;
+  }
+
+  h1 {
+    text-align: center;
+    line-height: 100px;
+  }
+}
+
+@media print {
+  footer {
+    padding: 5px;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    }
+}

@@ -1,5 +1,5 @@
 const main = document.querySelector('main'),
-    nomsExos = ['JCVD et Co','Les Positionnements','Flex Box','Grid','Les Animations','Responsive (Grille)','','','','FIL ROUGE'];
+    nomsExos = ['JCVD et Co','Les Positionnements','Flex Box','Grid','Les Animations','Responsive (Grille)','Responsive (Page Web)','','','FIL ROUGE'];
 
 for (let i = 0; i < nomsExos.length; i++) {
   const lien = document.createElement('a');

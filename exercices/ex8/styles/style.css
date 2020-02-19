@@ -1,0 +1,26 @@
+div {
+  text-align: left;
+}
+
+.col {
+  height: 100%;
+}
+
+article, img, a {
+  border-radius: 5px;
+}
+
+article {
+  background-color: cadetblue;
+}
+
+article p {
+  padding: 25px;
+
+  color: white;
+}
+
+article img {
+  float: left;
+  width: 100px;
+}

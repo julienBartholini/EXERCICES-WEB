@@ -1,0 +1,524 @@
+/* MOBILE FIRST :
+---------------------------------------------------------------------- */
+* {
+  color: cadetblue;
+  font-family: helvetica;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: whitesmoke;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.25em;
+}
+
+p {
+  padding-left: 25px;
+
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.container {
+  padding: 0 10px;
+  width: 100%;
+}
+
+.row {
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.row > * {
+  float: left;
+}
+
+.row > *.center {
+  float: none;
+  margin: auto;
+}
+
+.row > *.right {
+  float: right;
+}
+
+.row::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* COLONNAGE (SMALL) :
+---------------------------------------------------------------------- */
+.col-xs-1 {
+  width: calc(100%/12);
+}
+
+.col-xs-2 {
+  width: calc(200%/12);
+}
+
+.col-xs-3 {
+  width: calc(300%/12);
+}
+
+.col-xs-4 {
+  width: calc(400%/12);
+}
+
+.col-xs-5 {
+  width: calc(500%/12);
+}
+
+.col-xs-6 {
+  width: calc(600%/12);
+}
+
+.col-xs-7 {
+  width: calc(700%/12);
+}
+
+.col-xs-8 {
+  width: calc(800%/12);
+}
+
+.col-xs-9 {
+  width: calc(900%/12);
+}
+
+.col-xs-10 {
+  width: calc(1000%/12);
+}
+
+.col-xs-11 {
+  width: calc(1100%/12);
+}
+
+.col-xs-12 {
+  width: calc(1200%/12);
+}
+
+/* DECALEURS (MOBILE FIRST) :
+---------------------------------------------------------------------- */
+.xs-decal-1 {
+  margin-left: calc(100%/12);
+}
+
+.xs-decal-2 {
+  margin-left: calc(200%/12);
+}
+
+.xs-decal-3 {
+  margin-left: calc(300%/12);
+}
+
+.xs-decal-4 {
+  margin-left: calc(400%/12);
+}
+
+.xs-decal-5 {
+  margin-left: calc(500%/12);
+}
+
+.xs-decal-6 {
+  margin-left: calc(600%/12);
+}
+
+.xs-decal-7 {
+  margin-left: calc(700%/12);
+}
+
+.xs-decal-8 {
+  margin-left: calc(800%/12);
+}
+
+.xs-decal-9 {
+  margin-left: calc(900%/12);
+}
+
+.xs-decal-10 {
+  margin-left: calc(1000%/12);
+}
+
+.xs-decal-11 {
+  margin-left: calc(1100%/12);
+}
+
+.xs-decal-12 {
+  margin-left: calc(1200%/12);
+}
+
+/* SPECIFICITEES (MOBILE FIRST) :
+---------------------------------------------------------------------- */
+.capital {
+  text-transform: uppercase;
+}
+
+.liens {
+  padding: 5px;
+
+  background-color: #5f9ea0;
+
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* SMALL :
+---------------------------------------------------------------------- */
+@media screen and (min-width: 700px) {
+
+  /* COLONNAGE (SMALL) :
+  ---------------------------------------------------------------------- */
+  .col-sm-1 {
+  width: calc(100%/12);
+  }
+
+  .col-sm-2 {
+    width: calc(200%/12);
+  }
+
+  .col-sm-3 {
+    width: calc(300%/12);
+  }
+
+  .col-sm-4 {
+    width: calc(400%/12);
+  }
+
+  .col-sm-5 {
+    width: calc(500%/12);
+  }
+
+  .col-sm-6 {
+    width: calc(600%/12);
+  }
+
+  .col-sm-7 {
+    width: calc(700%/12);
+  }
+
+  .col-sm-8 {
+    width: calc(800%/12);
+  }
+
+  .col-sm-9 {
+    width: calc(900%/12);
+  }
+
+  .col-sm-10 {
+    width: calc(1000%/12);
+  }
+
+  .col-sm-11 {
+    width: calc(1100%/12);
+  }
+
+  .col-sm-12 {
+    width: calc(1200%/12);
+  }
+
+  /* DECALEURS (SMALL) :
+  ---------------------------------------------------------------------- */
+  .sm-decal-1 {
+    margin-left: calc(100%/12);
+  }
+  
+  .sm-decal-2 {
+    margin-left: calc(200%/12);
+  }
+  
+  .sm-decal-3 {
+    margin-left: calc(300%/12);
+  }
+  
+  .sm-decal-4 {
+    margin-left: calc(400%/12);
+  }
+  
+  .sm-decal-5 {
+    margin-left: calc(500%/12);
+  }
+  
+  .sm-decal-6 {
+    margin-left: calc(600%/12);
+  }
+  
+  .sm-decal-7 {
+    margin-left: calc(700%/12);
+  }
+  
+  .sm-decal-8 {
+    margin-left: calc(800%/12);
+  }
+  
+  .sm-decal-9 {
+    margin-left: calc(900%/12);
+  }
+  
+  .sm-decal-10 {
+    margin-left: calc(1000%/12);
+  }
+  
+  .sm-decal-11 {
+    margin-left: calc(1100%/12);
+  }
+  
+  .sm-decal-12 {
+    margin-left: calc(1200%/12);
+  }
+
+  /* SPECIFICITEES (SMALL) :
+  ---------------------------------------------------------------------- */
+  h1 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1em;
+  }
+}
+
+/* MEDIUM :
+---------------------------------------------------------------------- */
+@media screen and (min-width: 900px) {
+
+  /* COLONNAGE (MEDIUM) :
+  ---------------------------------------------------------------------- */
+  .col-md-1 {
+    width: calc(100%/12);
+  }
+  
+  .col-md-2 {
+    width: calc(200%/12);
+  }
+  
+  .col-md-3 {
+    width: calc(300%/12);
+  }
+  
+  .col-md-4 {
+    width: calc(400%/12);
+  }
+  
+  .col-md-5 {
+    width: calc(500%/12);
+  }
+  
+  .col-md-6 {
+    width: calc(600%/12);
+  }
+  
+  .col-md-7 {
+    width: calc(700%/12);
+  }
+  
+  .col-md-8 {
+    width: calc(800%/12);
+  }
+  
+  .col-md-9 {
+    width: calc(900%/12);
+  }
+  
+  .col-md-10 {
+    width: calc(1000%/12);
+  }
+  
+  .col-md-11 {
+    width: calc(1100%/12);
+  }
+  
+  .col-md-12 {
+    width: calc(1200%/12);
+  }
+
+  /* DECALEURS (MEDIUM) :
+  ---------------------------------------------------------------------- */
+  .md-decal-1 {
+    margin-left: calc(100%/12);
+  }
+  
+  .md-decal-2 {
+    margin-left: calc(200%/12);
+  }
+  
+  .md-decal-3 {
+    margin-left: calc(300%/12);
+  }
+  
+  .md-decal-4 {
+    margin-left: calc(400%/12);
+  }
+  
+  .md-decal-5 {
+    margin-left: calc(500%/12);
+  }
+  
+  .md-decal-6 {
+    margin-left: calc(600%/12);
+  }
+  
+  .md-decal-7 {
+    margin-left: calc(700%/12);
+  }
+  
+  .md-decal-8 {
+    margin-left: calc(800%/12);
+  }
+  
+  .md-decal-9 {
+    margin-left: calc(900%/12);
+  }
+  
+  .md-decal-10 {
+    margin-left: calc(1000%/12);
+  }
+  
+  .md-decal-11 {
+    margin-left: calc(1100%/12);
+  }
+  
+  .md-decal-12 {
+    margin-left: calc(1200%/12);
+  }
+
+  /* SPECIFICITEES (MEDIUM) :
+  ---------------------------------------------------------------------- */
+  .md-shazam {
+    display: none;
+  }
+
+  article p {
+    
+  }
+}
+
+/* LARGE :
+---------------------------------------------------------------------- */
+@media screen and (min-width: 1200px) {
+
+  /* COLONNAGE (LARGE) :
+  ---------------------------------------------------------------------- */
+  .col-lg-1 {
+    width: calc(100%/12);
+  }
+  
+  .col-lg-2 {
+    width: calc(200%/12);
+  }
+  
+  .col-lg-3 {
+    width: calc(300%/12);
+  }
+  
+  .col-lg-4 {
+    width: calc(400%/12);
+  }
+  
+  .col-lg-5 {
+    width: calc(500%/12);
+  }
+  
+  .col-lg-6 {
+    width: calc(600%/12);
+  }
+  
+  .col-lg-7 {
+    width: calc(700%/12);
+  }
+  
+  .col-lg-8 {
+    width: calc(800%/12);
+  }
+  
+  .col-lg-9 {
+    width: calc(900%/12);
+  }
+  
+  .col-lg-10 {
+    width: calc(1000%/12);
+  }
+  
+  .col-lg-11 {
+    width: calc(1100%/12);
+  }
+  
+  .col-lg-12 {
+    width: calc(1200%/12);
+  }
+
+  /* DECALEURS (LARGE) :
+  ---------------------------------------------------------------------- */
+  .lg-decal-1 {
+    margin-left: calc(100%/12);
+  }
+  
+  .lg-decal-2 {
+    margin-left: calc(200%/12);
+  }
+  
+  .lg-decal-3 {
+    margin-left: calc(300%/12);
+  }
+  
+  .lg-decal-4 {
+    margin-left: calc(400%/12);
+  }
+  
+  .lg-decal-5 {
+    margin-left: calc(500%/12);
+  }
+  
+  .lg-decal-6 {
+    margin-left: calc(600%/12);
+  }
+  
+  .lg-decal-7 {
+    margin-left: calc(700%/12);
+  }
+  
+  .lg-decal-8 {
+    margin-left: calc(800%/12);
+  }
+  
+  .lg-decal-9 {
+    margin-left: calc(900%/12);
+  }
+  
+  .lg-decal-10 {
+    margin-left: calc(1000%/12);
+  }
+  
+  .lg-decal-11 {
+    margin-left: calc(1100%/12);
+  }
+  
+  .lg-decal-12 {
+    margin-left: calc(1200%/12);
+  }
+}

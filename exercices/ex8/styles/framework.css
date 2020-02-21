@@ -1,3 +1,10 @@
+/*
+----------------------------------------------------------------------
+---- Merci à Florian pour m'avoir montré son système de décalage -----
+----------------------------------------------------------------------
+*/
+
+
 /* MOBILE FIRST :
 ---------------------------------------------------------------------- */
 * {
@@ -23,9 +30,10 @@ h2 {
   font-size: 1.25em;
 }
 
-p {
+p:first-child {
   padding-left: 25px;
 
+  color: cadetblue;
   font-size: 1.2em;
   text-align: justify;
 }
@@ -43,15 +51,6 @@ p {
 
 .row > * {
   float: left;
-}
-
-.row > *.center {
-  float: none;
-  margin: auto;
-}
-
-.row > *.right {
-  float: right;
 }
 
 .row::after {
@@ -409,12 +408,16 @@ p {
 
   /* SPECIFICITEES (MEDIUM) :
   ---------------------------------------------------------------------- */
-  .md-shazam {
+  .md-bonjour {
+    display: block;
+  }
+  
+  .md-aurevoir {
     display: none;
   }
 
-  article p {
-    
+  article {
+    height: 1000px;
   }
 }
 
@@ -520,5 +523,15 @@ p {
   
   .lg-decal-12 {
     margin-left: calc(1200%/12);
+  }
+
+  /* SPECIFICITEES (LARGE) :
+  ---------------------------------------------------------------------- */
+  .lg-decal-demi {
+    margin-left: calc(50%/12);
+  }
+
+  .lg-aurevoir {
+    display: none;
   }
 }

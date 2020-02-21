@@ -63,7 +63,48 @@ p:first-child {
   text-align: center;
 }
 
-/* COLONNAGE (SMALL) :
+.hamburger {
+  width: 52px;
+  height: 51px;
+
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hamburger :only-child {
+  position: relative;
+  width: 100%;
+  height: 15px;
+
+  background-color: cadetblue;
+}
+
+.hamburger :only-child::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+
+  width: 100%;
+  height: 15px;
+
+  background-color: cadetblue;
+}
+
+.hamburger :only-child::after {
+  content: '';
+  position: absolute;
+  top: 36px;
+  width: 100%;
+  height: 15px;
+
+  background-color: cadetblue;
+}
+
+.right {
+  float: right;
+}
+
+/* COLONNAGE (MOBILE FIRST) :
 ---------------------------------------------------------------------- */
 .col-xs-1 {
   width: calc(100%/12);
@@ -169,15 +210,27 @@ p:first-child {
   text-transform: uppercase;
 }
 
-.liens {
-  padding: 5px;
+.xs-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
 
-  background-color: #5f9ea0;
+  width: 150px;
+  height: 100%;
 
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
+  background-color: rgba(95, 158, 160, .75);
+
+  z-index: 100;
+}
+
+.liens-mobile {
+  display: block;
+  width: ;
+}
+
+.xs-aurevoir {
+  display: none;
 }
 
 /* SMALL :
@@ -299,6 +352,25 @@ p:first-child {
   h3 {
     margin: 0;
     font-size: 1em;
+  }
+
+  .liens-classic {
+    padding: 5px;
+  
+    background-color: #5f9ea0;
+  
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .sm-bonjour {
+    display: block;
+  }
+
+  .sm-aurevoir {
+    display: none;
   }
 }
 

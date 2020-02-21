@@ -12,6 +12,9 @@
     <!-- Image en haut à gauche -->
     <div class="row">
       <img src="imgs/simple.jpg" class="col col-xs-2 col-sm-1 md-aurevoir"/>
+      <div id="btnHamburger" class="hamburger right sm-aurevoir">
+        <div></div>
+      </div>
     </div>
 
     <!-- Grand titre (MA PROPRE GRILLE) -->
@@ -21,18 +24,26 @@
 
     <!-- Image top / centrale -->
     <div class="row">
-      <img class="col col-xs-4 col-sm-4 col-md-2 sm-decal-4 md-decal-5" src="imgs/simple.jpg" alt="tête de gentil" title="tête de gentil" />
+      <img class="col col-xs-4 col-sm-4 col-md-2 xs-decal-4 sm-decal-4 md-decal-5" src="imgs/simple.jpg" alt="tête de gentil" title="tête de gentil" />
     </div>
 
-    <!-- Menu classique (Tout sauf mobile) -->
-    <div class="row xs-shazam">
-      <div class="col col-sm-1">&nbsp;</div>
-      <a class="col col-sm-2 liens" href="#">lien 1</a>
+    <!-- Menu hamburger (Disparait au dessus de MOBILE) -->
+    <nav id="xsMenu" class="xs-menu sm-aurevoir">
+      <a id="btnRetour" class="liens-mobile" href="#">retour</a>
+      <a class="liens-mobile" href="#">lien 1</a>
+      <a class="liens-mobile" href="#">lien 2</a>
+      <a class="liens-mobile" href="#">lien 3</a>
+    </nav>
+
+    <!-- Menu classique (Apparait au dessus de MOBILE) -->
+    <nav class="row xs-aurevoir sm-bonjour">
+      <div class="col col-sm-1">&nbsp;</div> 
+      <a class="col col-sm-2 liens-classic" href="#">lien 1</a>
       <div class="col col-sm-2">&nbsp;</div>
-      <a class="col col-sm-2 liens" href="#">lien 2</a>
+      <a class="col col-sm-2 liens-classic" href="#">lien 2</a>
       <div class="col col-sm-2">&nbsp;</div>
-      <a class="col col-sm-2 liens" href="#">lien 3</a>
-    </div>
+      <a class="col col-sm-2 liens-classic" href="#">lien 3</a>
+    </nav>
 
     <!-- Titre du paragraphe d'intro -->
     <div class="row">
@@ -105,5 +116,6 @@
     <!-- Div séparatrice / Maintien une marge esthétique en bas de page -->
     <div class="row"></div>
   </div>
+  <script src="scripts/script.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ div {
   height: 100%;
 }
 
-article, img, a {
+article, img, a, .hamburger {
   border-radius: 5px;
 }
 

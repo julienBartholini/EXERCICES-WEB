@@ -210,21 +210,6 @@ p:first-child {
   text-transform: uppercase;
 }
 
-.liens-mobile {
-  display: block;
-  width: 100%;
-  height: 50px;
-
-  border-bottom: 2px solid white;
-
-  color: white;
-  font: normal 1.5em helvetica;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  line-height: 48px;
-}
-
 .xs-aurevoir {
   display: none;
 }
@@ -476,16 +461,16 @@ p:first-child {
 
   /* SPECIFICITEES (MEDIUM) :
   ---------------------------------------------------------------------- */
+  article {
+    height: 1000px;
+  }
+  
   .md-bonjour {
     display: block;
   }
   
   .md-aurevoir {
     display: none;
-  }
-
-  article {
-    height: 1000px;
   }
 }
 

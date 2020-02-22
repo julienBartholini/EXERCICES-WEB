@@ -1,7 +1,3 @@
-div {
-  text-align: left;
-}
-
 article, img, a, .hamburger {
   border-radius: 5px;
 }
@@ -10,6 +6,10 @@ article {
   padding: 5px 20px;
 
   background-color: cadetblue;
+}
+
+div {
+  text-align: left;
 }
 
 p {

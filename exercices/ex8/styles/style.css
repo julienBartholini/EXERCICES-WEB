@@ -2,10 +2,6 @@ div {
   text-align: left;
 }
 
-.col {
-  height: 100%;
-}
-
 article, img, a, .hamburger {
   border-radius: 5px;
 }

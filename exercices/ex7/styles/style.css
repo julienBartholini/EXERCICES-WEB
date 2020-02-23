@@ -4,3 +4,24 @@
   padding: 0;
 }
 
+header {
+
+}
+
+main {
+  
+}
+
+footer {
+  margin-top: 15px;
+  padding: 15px 0;
+  width: 100%;
+
+  background-color: cadetblue;
+  
+  color: white;
+  font: bold 14px helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

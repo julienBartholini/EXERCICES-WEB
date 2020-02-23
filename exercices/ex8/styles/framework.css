@@ -63,45 +63,26 @@ p:first-child {
   text-align: center;
 }
 
-.hamburger {
-  width: 52px;
-  height: 51px;
-
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.hamburger div:first-child {
-  position: relative;
-  width: 100%;
-  height: 15px;
-
-  background-color: cadetblue;
-}
-
-.hamburger div:first-child::before {
-  content: '';
-  position: absolute;
-  top: 18px;
-
-  width: 100%;
-  height: 15px;
-
-  background-color: cadetblue;
-}
-
-.hamburger div:first-child::after {
-  content: '';
-  position: absolute;
-  top: 36px;
-  width: 100%;
-  height: 15px;
-
-  background-color: cadetblue;
+.capital {
+  text-transform: uppercase;
 }
 
 .right {
   float: right;
+}
+
+.signature {
+  margin-top: 15px;
+  padding: 15px 0;
+
+  background-color: cadetblue;
+
+  color: white;
+  font: bold 14px helvetica;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
 }
 
 /* COLONNAGE (MOBILE FIRST) :
@@ -206,8 +187,41 @@ p:first-child {
 
 /* SPECIFICITEES (MOBILE FIRST) :
 ---------------------------------------------------------------------- */
-.capital {
-  text-transform: uppercase;
+.hamburger {
+  width: 52px;
+  height: 51px;
+
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hamburger div:first-child {
+  position: relative;
+  width: 100%;
+  height: 15px;
+
+  background-color: cadetblue;
+}
+
+.hamburger div:first-child::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+
+  width: 100%;
+  height: 15px;
+
+  background-color: cadetblue;
+}
+
+.hamburger div:first-child::after {
+  content: '';
+  position: absolute;
+  top: 36px;
+  width: 100%;
+  height: 15px;
+
+  background-color: cadetblue;
 }
 
 .xs-aurevoir {

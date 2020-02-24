@@ -15,11 +15,6 @@ body {
   margin: 15px;
 }
 
-img {
-  width: 60px;
-  height: 60px;
-}
-
 /* HEADER -------------------------------------------------- */
 header {
   width: 100%;
@@ -57,6 +52,8 @@ header > div div p span {
 
 header > div ul {
   float: right;
+
+  font-size: 15px;
 }
 
 header > div ul li span {
@@ -65,9 +62,64 @@ header > div ul li span {
 
 /* MAIN -------------------------------------------------- */
 main {
-  clear: both;
+  width: 100%;
+
+  font-size: 15px;
 }
 
+main section {
+  padding: 10px 0;
+  width: 100%;
+
+  border-bottom: 2px solid cadetblue;
+}
+
+main section > * {
+  display: inline-block;
+  width: 20%;
+}
+
+main section p:first-child {
+  transform: translateY(-25px);
+  margin-left: 5px;
+
+  font-weight: bold;
+}
+
+main section p:last-child {
+  transform: translateY(-25px);
+}
+
+main section p:last-child span {
+  font-weight: bold;
+}
+
+main section img {
+  margin-right: 10%;
+  width: 60px;
+  height: 60px;
+}
+
+main section ul {
+  transform: translateY(-15px);
+}
+
+main section ul li span {
+  position: absolute;
+  transform: translateY(2px);
+
+  font-size: 8px;
+}
+
+main section ul li:first-child {
+  font-weight: bold;
+}
+
+main section ul li:first-child span {
+  font-weight: bold;
+}
+
+/* FOOTER -------------------------------------------------- */
 footer {
   margin-top: 15px;
   padding: 15px 0;

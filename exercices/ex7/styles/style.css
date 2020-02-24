@@ -15,7 +15,7 @@ body {
   margin: 15px;
 }
 
-/* HEADER -------------------------------------------------- */
+/* HEADER (MOBILE) -------------------------------------------------- */
 header {
   width: 100%;
   height: 175px;
@@ -60,7 +60,7 @@ header > div ul li span {
   font-weight: bold;
 }
 
-/* MAIN -------------------------------------------------- */
+/* MAIN (MOBILE) -------------------------------------------------- */
 main {
   width: 100%;
 
@@ -132,4 +132,28 @@ footer {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* ------------------------------ INTERMEDIAIRE ------------------------------ */
+
+@media screen and (min-width: 400px) {
+  /* HEADER (INTERMEDIAIRE) -------------------------------------------------- */
+  header > div ul {
+    margin-right: 25%;
+  }
+}
+
+/* ------------------------------ MEDIUM ET + ------------------------------ */
+
+@media screen and (min-width: 800px) {
+  /* HEADER (MEDIUM ET +) -------------------------------------------------- */
+  header > div ul {
+    margin-right: 50%;
+  }
+
+  /* MAIN (MEDIUM ET +) -------------------------------------------------- */
+  main section > * {
+    display: block;
+    width: 20%;
+  }
 }

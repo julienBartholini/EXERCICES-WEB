@@ -9,37 +9,63 @@
   list-style: none;
 }
 
-img {
-  width: 100px;
-  height: 100px;
+/* ------------------------------ MOBILE FIRST ------------------------------ */
+
+body {
+  margin: 15px;
 }
 
-header {
+img {
+  width: 60px;
+  height: 60px;
+}
 
+/* HEADER -------------------------------------------------- */
+header {
+  width: 100%;
+  height: 175px;
+
+  border-bottom: 2px solid cadetblue;
+}
+
+header > ul {
+  margin-bottom: 10px;
 }
 
 header > div div {
-  width: 200px;
-
-  background-color: cadetblue;
+  float: left;
+  width: 130px;
 }
 
 header > div div img {
-  width: 30px;
-  height: 30px;
   float: left;
+  width: 70px;
+  height: 70px;
 }
 
 header > div div p {
   float: right;
+
+  font-size: 30px;
+}
+
+header > div div p span {
+  float: right;
+
+  font-size: 14px;
 }
 
 header > div ul {
-  clear: both;
+  float: right;
 }
 
-main {
+header > div ul li span {
+  font-weight: bold;
+}
 
+/* MAIN -------------------------------------------------- */
+main {
+  clear: both;
 }
 
 footer {

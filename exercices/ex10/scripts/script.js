@@ -95,17 +95,20 @@ const audio = document.querySelector('audio'),
     sectionReveil = document.querySelector('#sectionReveil'),
     btnSuivant = document.querySelector('#btnSuivant'),
     sectionLieu = document.querySelector('#sectionLieu'),
+    visuelLieu = document.querySelector('#visuelLieu'),
     btnLieu = document.querySelector('#btn'),
 
     // ORIENTE OBJET, JUJU !!! ;^)
-    lieux = ['rue', 'sanitorium', 'theatre', 'ecole', 'alchemia', 'woodside', 'lakeview', 'parc', 'prisonlac', 'egouts'],
+    lieux = ['rue', 'ecole', 'alchemia', 'hotel', 'parc', 'prisonlac', 'egouts'],
     armesBlch = ['baton', 'barre', 'clefanglaise', 'marteau'],
     armesFeu = ['pistolet', 'fusil', 'carabine', 'colt'],
-    survivants = ['travis', 'harry', 'cybil', 'james', 'maria', 'laura', 'heather', 'douglas', 'henry', 'eileen'],
+    survivants = ['harry', 'cybil', 'james', 'maria', 'laura', 'heather', 'douglas', 'henry', 'eileen'],
     realites = ['normal', 'enfer'],
-    monstres = ['mumbler', 'airscreamer', 'lyingfigure', 'nurse', 'scraper', 'rubberface', 'ariel', 'twoback', 'pyramid', 'walter'],
+    monstres = ['mumbler', 'airscreamer', 'lyingfigure', 'nurse', 'scraper', 'rubberface', 'pyramid', 'walter'],
 
     btnsSuivantText = ['Où suis-je ?', 'Qui êtes-vous ?', 'Que ce passe t-il ?', "Mais qu'est ce que ?..."];
+
+visuelLieu.style.backgroundImage = "url(../imgs/lieux/hotel.jpg)";
 
 requestAnimationFrame(openIntro);
 

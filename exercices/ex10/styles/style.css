@@ -43,7 +43,7 @@ main {
 }
 
 section {
-
+   
 }
 
 #sectionIntro {
@@ -203,7 +203,10 @@ h1 span {
   width: 100%;
   height: 100%;
 
-  background: url(../imgs/lieux/rue.jpg) no-repeat center center / cover;
+  /* background-image: url(../imgs/lieux/hotel.jpg); */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 
   animation: respiration 5s ease infinite, ouverture 3s ease forwards;
 }

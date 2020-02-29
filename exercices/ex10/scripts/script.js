@@ -1,6 +1,5 @@
 function btn() {
-  if (compteur !== 5) {
-    console.log(compteur);
+  if (compteur !== 3) {
     compteur = compteur + 1;
   } else {
     btnLieu.style.display = 'block';
@@ -83,7 +82,6 @@ let opacityCard = 0,
     compteur = 0,
 
     // TABLEAUX DES ELTS DU SCENARIO PRE-GENERE
-    armes = [/* arme blanche */, /* arme à feu */],
     scenarioElts = [/* lieu, arme 1er coffre, arme 2eme coffre, survivant, réalite, monstre */];
 
 const audio = document.querySelector('audio'),
@@ -96,19 +94,16 @@ const audio = document.querySelector('audio'),
     btnSuivant = document.querySelector('#btnSuivant'),
     sectionLieu = document.querySelector('#sectionLieu'),
     visuelLieu = document.querySelector('#visuelLieu'),
-    btnLieu = document.querySelector('#btn'),
+    btnLieu = document.querySelector('#btnLieu'),
 
     // ORIENTE OBJET, JUJU !!! ;^)
-    lieux = ['rue', 'ecole', 'alchemia', 'hotel', 'parc', 'prisonlac', 'egouts'],
-    armesBlch = ['baton', 'barre', 'clefanglaise', 'marteau'],
-    armesFeu = ['pistolet', 'fusil', 'carabine', 'colt'],
+    lieux = ['rue', 'ecole', 'alchemia', 'hotel', 'prisonlac', 'egouts'],
+    armes = ['baton', 'barre', 'pistolet', 'fusil', 'carabine', 'colt'],
     survivants = ['harry', 'cybil', 'james', 'maria', 'laura', 'heather', 'douglas', 'henry', 'eileen'],
     realites = ['normal', 'enfer'],
-    monstres = ['mumbler', 'airscreamer', 'lyingfigure', 'nurse', 'scraper', 'rubberface', 'pyramid', 'walter'],
+    monstres = ['mumbler', 'airscreamer', 'lyingfigure', 'nurse', 'scraper', 'rubberface', 'pyramid'],
 
     btnsSuivantText = ['Où suis-je ?', 'Qui êtes-vous ?', 'Que ce passe t-il ?', "Mais qu'est ce que ?..."];
-
-visuelLieu.style.backgroundImage = "url(../imgs/lieux/hotel.jpg)";
 
 requestAnimationFrame(openIntro);
 

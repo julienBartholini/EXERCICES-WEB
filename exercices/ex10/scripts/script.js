@@ -108,7 +108,6 @@ const audio = document.querySelector('audio'),
     btnLieu = document.querySelector('#btnLieu'),
 
     // ORIENTE OBJET, JUJU !!! ;^)
-    tabLieux = ['rue', 'ecole', 'hopital', 'hotel', 'prison', 'egouts'],
     tabArmes = ['tuyau', 'pistolet', 'fusil', 'colt'],
     tabSurvivants = ['harry', 'cybil', 'james', 'laura', 'heather', 'douglas', 'henry', 'eileen'],
     tabMonstres = ['mumbler', 'nightFlutter', 'lyingFigure', 'nurse', 'scraper', 'rubberFace', 'pyramid'],
@@ -116,18 +115,59 @@ const audio = document.querySelector('audio'),
     tabReactions = ['Où suis-je ?...', "?!... Ca pourrait servir.", 'Qui êtes vous ?...', "C'est quoi ça ?!..."];
 
 // OBJETS LIEUX :
-const rue = new Scenariste('rue', 'Les Rues', '...', 25),
+const rues = new Scenariste('rues', 'Les Rues', '...', 25),
 hotel = new Scenariste('hotel', 'Hotel Lakeview', '...', 21),
 ecole = new Scenariste('ecole', 'Ecole Primaire Midwish', '...', 17),
 hopital = new Scenariste('hopital', 'Hopital Alchemia', '...', 13),
 egouts = new Scenariste('egouts', 'Les Egouts', '...', 9),
-prison = new Scenariste('prison', 'La Prison Lacustre', '...', 3);
+prison = new Scenariste('prison', 'La Prison Lacustre', '...', 3),
+// OBJETS ARMES :
+colt = new Scenariste('colt', 'Colt', '...', 25),
+fusil = new Scenariste('fusil', 'Fusil', '...', 18),
+pistolet = new Scenariste('pistole', 'Pistolet', '...', 11),
+tuyau = new Scenariste('tuyau', "Tuyau d'Acier", '...', 3),
+// OBJETS SURVIVANTS :
+harry = new Scenariste('harry', 'Harry Mason', '...', 25),
+heather = new Scenariste('heather', 'Heather Mason', '...', 22),
+henry = new Scenariste('henry', 'Henry Townshend', '...', 19),
+james = new Scenariste('james', 'James Sunderland', '...', 16),
+cybil = new Scenariste('cybil', 'Cybil Bennett', '...', 13),
+douglas = new Scenariste('douglas', 'Douglas Cartland', '...', 10),
+eileen = new Scenariste('eileen', 'Eileen Galvin', '...', 7),
+laura = new Scenariste('laura', 'Laura', '...', 2),
+// OBJETS MONSTRES
+lyingFigure = new Scenariste('', '', '...', 25),
+mumbler = new Scenariste('', '', '...', 21),
+nightFlutter = new Scenariste('', '', '...', 17),
+nurse = new Scenariste('', '', '...', 13),
+rubberFace = new Scenariste('', '', '...', 9),
+scraper = new Scenariste('', '', '...', 5),
+pyramid = new Scenariste('', '', '...', 1);
 
 // TABLEAUX DES CATEGORIES :
-const mesLieux = [rue, hotel, ecole, hopital, egouts, prison];
+const mesLieux = [rues, hotel, ecole, hopital, egouts, prison],
+mesArmes = [colt, fusil, pistolet, tuyau],
+mesSurvivants = [harry, heather, henry, james, cybil, douglas, eileen, laura],
+mesMonstres = [lyingFigure, mumbler, nightFlutter, nurse, rubberFace, scraper, pyramid];
 
+console.log('MES LIEUX :');
 for (let i = 0; i < mesLieux.length; i++) {
   console.log(mesLieux[i].affiche());
+}
+
+console.log('MES ARMES :');
+for (let i = 0; i < mesArmes.length; i++) {
+  console.log(mesArmes[i].affiche());
+}
+
+console.log('MES SURVIVANTS :');
+for (let i = 0; i < mesSurvivants.length; i++) {
+  console.log(mesSurvivants[i].affiche());
+}
+
+console.log('MES MONSTRES :');
+for (let i = 0; i < mesMonstres.length; i++) {
+  console.log(mesMonstres[i].affiche());
 }
 
 requestAnimationFrame(openIntro);

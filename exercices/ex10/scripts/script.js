@@ -78,11 +78,10 @@ function closeReveil() {
 let opacityCard = 0,
     opacityIntro = 0,
     opacityReveil = 0,
-    eltsScenario = [],
     compteur = 0,
 
-    // TABLEAUX DES ELTS DU SCENARIO PRE-GENERE
-    scenarioElts = [/* lieu, arme 1er coffre, arme 2eme coffre, survivant, réalite, monstre */];
+    // TABLEAUX DES ELTS DU SCENARIO PRE-GENERE (lieu, arme, survivant, monstre)
+    scenarioElts = [];
 
 const audio = document.querySelector('audio'),
     sectionIntro = document.querySelector('#sectionIntro'),
@@ -97,13 +96,12 @@ const audio = document.querySelector('audio'),
     btnLieu = document.querySelector('#btnLieu'),
 
     // ORIENTE OBJET, JUJU !!! ;^)
-    lieux = ['rue', 'ecole', 'alchemia', 'hotel', 'prisonlac', 'egouts'],
-    armes = ['baton', 'barre', 'pistolet', 'fusil', 'carabine', 'colt'],
-    survivants = ['harry', 'cybil', 'james', 'maria', 'laura', 'heather', 'douglas', 'henry', 'eileen'],
-    realites = ['normal', 'enfer'],
-    monstres = ['mumbler', 'airscreamer', 'lyingfigure', 'nurse', 'scraper', 'rubberface', 'pyramid'],
+    lieux = ['rue', 'ecole', 'hopital', 'hotel', 'prisonlac', 'egouts'],
+    armes = ['tuyau', 'pistolet', 'fusil', 'colt'],
+    survivants = ['harry', 'cybil', 'james', 'laura', 'heather', 'douglas', 'henry', 'eileen'],
+    monstres = ['mumbler', 'nightFlutter', 'lyingfigure', 'nurse', 'scraper', 'rubberface', 'pyramid'],
 
-    btnsSuivantText = ['Où suis-je ?', 'Qui êtes-vous ?', 'Que ce passe t-il ?', "Mais qu'est ce que ?..."];
+    btnsSuivantText = ['Où suis-je ?', 'Qui êtes-vous ?', "Qu'est ce que ?..."];
 
 requestAnimationFrame(openIntro);
 

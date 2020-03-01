@@ -14,24 +14,16 @@ function scenariste(mesCategories, monScenario) {
   for (let i = 0; i < mesCategories.length; i++) {
     let iRandom = Math.floor(Math.random() * mesCategories[i].length);
     monScenario.push(mesCategories[i][iRandom]);
-    console.log(monScenario[i]);
+    // console.log(monScenario[i]);
   }
 }
 
-function realisateur() {
-
+function realisateur(boutonClique, sectionActuelle) {
+  console.log(boutonClique);
+  console.log(sectionActuelle);
 }
 
 // -------------------------------------------------------------------------------------------------------------
-
-// function btn() {
-//   if (compteur !== 3) {
-//     compteur = compteur + 1;
-//   } else {
-//     btnLieu.style.display = 'block';
-//     clearInterval(setInterval(btn, 1000));
-//   }
-// }
 
 function openIntro() {
   if (opacityIntro < 1) {
@@ -97,7 +89,6 @@ function closeReveil() {
     cancelAnimationFrame(requestAnimationFrame(openReveil));
     sectionReveil.style.display = 'none';
     sectionLieu.style.display = 'block';
-    setInterval(btn, 1000);
   }
 }
 
@@ -107,23 +98,42 @@ let opacityCard = 0,
     opacityIntro = 0,
     opacityReveil = 0,
     compteur = 0,
-
     // TABLEAUX DES ELTS DU SCENARIO PRE-GENERE (lieu, arme, survivant, monstre)
     monScenario = [];
 
 const audio = document.querySelector('audio'),
-    sectionIntro = document.querySelector('#sectionIntro'),
-    btnCommencer = document.querySelector('#btnCommencer'),
-    btnInfos = document.querySelector('#btnInfos'),
     carteInfos = document.querySelector('#carteInfos'),
     btnFermer = document.querySelector('#btnFermer'),
-    sectionReveil = document.querySelector('#sectionReveil'),
-    btnSuivant = document.querySelector('#btnSuivant'),
-    sectionLieu = document.querySelector('#sectionLieu'),
-    visuelLieu = document.querySelector('#visuelLieu'),
-    btnLieu = document.querySelector('#btnLieu'),
 
-    tabReactions = ['Où suis-je ?...', "?!... Ca pourrait servir.", 'Qui êtes vous ?...', "C'est quoi ça ?!..."];
+    sectionIntro = document.querySelector('#sectionIntro'),
+    sectionReveil = document.querySelector('#sectionReveil'),
+    sectionLieu = document.querySelector('#sectionLieu'),
+    sectionArme = document.querySelector('#sectionArme'),
+    sectionSurvivant = document.querySelector('#sectionSurvivant'),
+    sectionMonstre = document.querySelector('#sectionMonstre'),
+    sectionResultat = document.querySelector('#sectionResultat'),
+
+    visuelLieu = document.querySelector('#visuelLieu'),
+    visuelArme = document.querySelector('#visuelArme'),
+    visuelSurvivant = document.querySelector('#visuelSurvivant'),
+    visuelMonstre = document.querySelector('#visuelMonstre'),
+
+    noteLieu = document.querySelector('#noteLieu'),
+    noteArme = document.querySelector('#noteArme'),
+    noteSurvivant = document.querySelector('#noteSurvivant'),
+    noteMontre = document.querySelector('#noteMonstre'),
+
+    btnCommencer = document.querySelector('#btnCommencer'),
+    btnInfos = document.querySelector('#btnInfos'),
+    btnSuivant = document.querySelector('#btnSuivant'),
+    btnLieu = document.querySelector('#btnLieu'),
+    btnArme = document.querySelector('#btnArme'),
+    btnSurvivant = document.querySelector('#btnSurvivant'),
+    btnMonstre = document.querySelector('#btnMonstre'),
+
+    tabSections = [sectionLieu, sectionArme, sectionSurvivant, sectionMonstre],
+    tabVisuelsSections = [visuelLieu, visuelArme, visuelSurvivant, visuelMonstre],
+    tabBtnsSections = [btnLieu, btnArme, btnSurvivant, btnMonstre];
 
 // OBJETS LIEUX :
 const rues = new Elements('rues', 'Les Rues', '...', 25),
@@ -166,25 +176,14 @@ mesCategories = [mesLieux, mesArmes, mesSurvivants, mesMonstres];
 // APPEL DE LA FONCTION 'SCENARISTE' :
 scenariste(mesCategories, monScenario);
 
-console.log('MES LIEUX :');
-for (let i = 0; i < mesLieux.length; i++) {
-  console.log(mesLieux[i].affiche());
+// GESTION EVENT BOUTONS DES SECTIONS :
+for (let i = 0; i < tabBtnsSections.length; i++) {
+  tabBtnsSections[i].addEventListener('click', function () {
+    realisateur(tabBtnsSections[i], tabSections[i]);
+  });
 }
 
-console.log('MES ARMES :');
-for (let i = 0; i < mesArmes.length; i++) {
-  console.log(mesArmes[i].affiche());
-}
-
-console.log('MES SURVIVANTS :');
-for (let i = 0; i < mesSurvivants.length; i++) {
-  console.log(mesSurvivants[i].affiche());
-}
-
-console.log('MES MONSTRES :');
-for (let i = 0; i < mesMonstres.length; i++) {
-  console.log(mesMonstres[i].affiche());
-}
+// -------------------------------------------------------------------------------------------------------------
 
 requestAnimationFrame(openIntro);
 
@@ -209,7 +208,3 @@ btnFermer.addEventListener('click', function () {
 btnSuivant.addEventListener('click', function () {
   requestAnimationFrame(closeReveil);
 });
-
-/*btnLieu.addEventListener('click', function () {
-
-});*/

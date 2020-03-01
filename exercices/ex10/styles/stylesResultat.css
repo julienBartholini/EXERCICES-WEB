@@ -1,3 +1,5 @@
 #sectionResultat {
   display: none;
+
+  animation: ouverture 3s ease forwards;
 }

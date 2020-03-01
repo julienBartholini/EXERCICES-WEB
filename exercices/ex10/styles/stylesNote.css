@@ -1,0 +1,70 @@
+#note {
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  height: 520px;
+
+  background: url(../imgs/papier.png) no-repeat center center / 100% 100%;
+
+  opacity: 0;
+  animation: apparitionNote 1s 4s ease forwards;
+}
+
+#note *:not(button) {
+  color: #432109;
+}
+
+#note h2 {
+  padding-bottom: 10px;
+
+  font: italic normal 25px Helvetica, sans-serif;
+  text-align: center;
+}
+
+#note h3 {
+  font: normal 25px Helvetica, sans-serif;
+}
+
+#note section {
+  height: 280px;
+
+  overflow: auto;
+}
+
+#note section p {
+  font: normal 16px Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+
+#note button {
+  padding: 10px;
+
+  border: none;
+  border-radius: 0 0 5px 5px;
+
+  background-color: firebrick;
+
+  font: normal 17px helvetica;
+  text-align: center;
+
+  cursor: pointer;
+  transition: all .1s ease;
+}
+
+#note button:hover {
+  box-shadow: 0 0 0 5px inset white;
+}
+
+@keyframes apparitionNote {
+  from {
+    transform: translate(-50%, -150%) rotateY(-90deg);
+  } to {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    opacity: .93;
+  }
+}

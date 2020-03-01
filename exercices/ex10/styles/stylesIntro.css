@@ -49,6 +49,8 @@ h1 span {
   margin-bottom: 20px;
 }
 
+/* -------------------------------------------------------- */
+
 #carteInfos {
   display: none;
   flex-direction: column;
@@ -61,7 +63,7 @@ h1 span {
   height: 575px;
 
   background-color: rgba(253, 245, 230, .9);
-
+  
   opacity: 0;
 }
 

@@ -1,3 +1,15 @@
+class Scenariste {
+  constructor(visuel, nom, description, nbPts) {
+    this.visuel = visuel;
+    this.nom = nom;
+    this.description = description;
+    this.nbPts = nbPts;
+  }
+  affiche() {
+    return `VISUEL : ${this.visuel} / NOM : ${this.nom} / DESCRIP : ${this.description} / PTS : ${this.nbPts}`;
+  }
+}
+
 function btn() {
   if (compteur !== 3) {
     compteur = compteur + 1;
@@ -96,12 +108,27 @@ const audio = document.querySelector('audio'),
     btnLieu = document.querySelector('#btnLieu'),
 
     // ORIENTE OBJET, JUJU !!! ;^)
-    lieux = ['rue', 'ecole', 'hopital', 'hotel', 'prisonlac', 'egouts'],
-    armes = ['tuyau', 'pistolet', 'fusil', 'colt'],
-    survivants = ['harry', 'cybil', 'james', 'laura', 'heather', 'douglas', 'henry', 'eileen'],
-    monstres = ['mumbler', 'nightFlutter', 'lyingfigure', 'nurse', 'scraper', 'rubberface', 'pyramid'],
+    tabLieux = ['rue', 'ecole', 'hopital', 'hotel', 'prison', 'egouts'],
+    tabArmes = ['tuyau', 'pistolet', 'fusil', 'colt'],
+    tabSurvivants = ['harry', 'cybil', 'james', 'laura', 'heather', 'douglas', 'henry', 'eileen'],
+    tabMonstres = ['mumbler', 'nightFlutter', 'lyingFigure', 'nurse', 'scraper', 'rubberFace', 'pyramid'],
 
-    btnsSuivantText = ['Où suis-je ?', 'Qui êtes-vous ?', "Qu'est ce que ?..."];
+    tabReactions = ['Où suis-je ?...', "?!... Ca pourrait servir.", 'Qui êtes vous ?...', "C'est quoi ça ?!..."];
+
+// OBJETS LIEUX :
+const rue = new Scenariste('rue', 'Les Rues', '...', 25),
+hotel = new Scenariste('hotel', 'Hotel Lakeview', '...', 21),
+ecole = new Scenariste('ecole', 'Ecole Primaire Midwish', '...', 17),
+hopital = new Scenariste('hopital', 'Hopital Alchemia', '...', 13),
+egouts = new Scenariste('egouts', 'Les Egouts', '...', 9),
+prison = new Scenariste('prison', 'La Prison Lacustre', '...', 3);
+
+// TABLEAUX DES CATEGORIES :
+const mesLieux = [rue, hotel, ecole, hopital, egouts, prison];
+
+for (let i = 0; i < mesLieux.length; i++) {
+  console.log(mesLieux[i].affiche());
+}
 
 requestAnimationFrame(openIntro);
 

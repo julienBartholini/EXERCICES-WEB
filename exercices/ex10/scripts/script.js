@@ -10,7 +10,7 @@ class Elements {
   }
 }
 
-function senariste(mesCategories, monScenario) {
+function scenariste(mesCategories, monScenario) {
   for (let i = 0; i < mesCategories.length; i++) {
     let iRandom = Math.floor(Math.random() * mesCategories[i].length);
     monScenario.push(mesCategories[i][iRandom]);
@@ -18,14 +18,20 @@ function senariste(mesCategories, monScenario) {
   }
 }
 
-function btn() {
-  if (compteur !== 3) {
-    compteur = compteur + 1;
-  } else {
-    btnLieu.style.display = 'block';
-    clearInterval(setInterval(btn, 1000));
-  }
+function realisateur() {
+
 }
+
+// -------------------------------------------------------------------------------------------------------------
+
+// function btn() {
+//   if (compteur !== 3) {
+//     compteur = compteur + 1;
+//   } else {
+//     btnLieu.style.display = 'block';
+//     clearInterval(setInterval(btn, 1000));
+//   }
+// }
 
 function openIntro() {
   if (opacityIntro < 1) {
@@ -95,6 +101,8 @@ function closeReveil() {
   }
 }
 
+// -------------------------------------------------------------------------------------------------------------
+
 let opacityCard = 0,
     opacityIntro = 0,
     opacityReveil = 0,
@@ -114,11 +122,6 @@ const audio = document.querySelector('audio'),
     sectionLieu = document.querySelector('#sectionLieu'),
     visuelLieu = document.querySelector('#visuelLieu'),
     btnLieu = document.querySelector('#btnLieu'),
-
-    // ORIENTE OBJET, JUJU !!! ;^)
-    tabArmes = ['tuyau', 'pistolet', 'fusil', 'colt'],
-    tabSurvivants = ['harry', 'cybil', 'james', 'laura', 'heather', 'douglas', 'henry', 'eileen'],
-    tabMonstres = ['mumbler', 'nightFlutter', 'lyingFigure', 'nurse', 'scraper', 'rubberFace', 'pyramid'],
 
     tabReactions = ['Où suis-je ?...', "?!... Ca pourrait servir.", 'Qui êtes vous ?...', "C'est quoi ça ?!..."];
 
@@ -160,6 +163,9 @@ mesMonstres = [lyingFigure, mumbler, nightFlutter, nurse, rubberFace, scraper, p
 
 mesCategories = [mesLieux, mesArmes, mesSurvivants, mesMonstres];
 
+// APPEL DE LA FONCTION 'SCENARISTE' :
+scenariste(mesCategories, monScenario);
+
 console.log('MES LIEUX :');
 for (let i = 0; i < mesLieux.length; i++) {
   console.log(mesLieux[i].affiche());
@@ -179,9 +185,6 @@ console.log('MES MONSTRES :');
 for (let i = 0; i < mesMonstres.length; i++) {
   console.log(mesMonstres[i].affiche());
 }
-
-// APPEL DE LA FONCTION 'SCENARISTE' :
-senariste(mesCategories, monScenario);
 
 requestAnimationFrame(openIntro);
 

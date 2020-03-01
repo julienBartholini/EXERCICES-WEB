@@ -1,4 +1,4 @@
-#note {
+.notes {
   padding: 45px;
   display: flex;
   flex-direction: column;
@@ -15,33 +15,33 @@
   animation: apparitionNote 1s 4s ease forwards;
 }
 
-#note *:not(button) {
+.notes *:not(button) {
   color: #432109;
 }
 
-#note h2 {
+.notes h2 {
   padding-bottom: 10px;
 
   font: italic normal 25px Helvetica, sans-serif;
   text-align: center;
 }
 
-#note h3 {
+.notes h3 {
   font: normal 25px Helvetica, sans-serif;
 }
 
-#note section {
+.notes section {
   height: 280px;
 
   overflow: auto;
 }
 
-#note section p {
+.notes section p {
   font: normal 16px Helvetica, sans-serif;
   letter-spacing: 1px;
 }
 
-#note button {
+.notes button {
   padding: 10px;
 
   border: none;
@@ -56,7 +56,7 @@
   transition: all .1s ease;
 }
 
-#note button:hover {
+.notes button:hover {
   box-shadow: 0 0 0 5px inset white;
 }
 

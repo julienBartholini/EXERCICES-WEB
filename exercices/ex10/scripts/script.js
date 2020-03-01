@@ -5,22 +5,28 @@ class Elements {
     this.description = description;
     this.nbPts = nbPts;
   }
-  affiche() {
-    return `VISUEL : ${this.visuel} / NOM : ${this.nom} / DESCRIP : ${this.description} / PTS : ${this.nbPts}`;
-  }
 }
 
 function scenariste(mesCategories, monScenario) {
   for (let i = 0; i < mesCategories.length; i++) {
     let iRandom = Math.floor(Math.random() * mesCategories[i].length);
     monScenario.push(mesCategories[i][iRandom]);
-    // console.log(monScenario[i]);
   }
 }
 
-function realisateur(boutonClique, sectionActuelle) {
+function realisateur(monScenario, tabVisuelsSections, tabNotesSections, pourcentage) {
+  for (let i = 0; i < monScenario.length; i++) {
+    tabVisuelsSections[i].style.backgroundImage = `url(../imgs/lieux/${monScenario[i].visuel}.jpg)`;
+    tabNotesSections[i].querySelector('h3').textContent = monScenario[i].nom;
+    tabNotesSections[i].querySelector('p').textContent = monScenario[i].description;
+    pourcentage = pourcentage + monScenario[i].nbPts;
+  }
+}
+
+function monteur(boutonClique, sectionActuelle, noteActuelle) {
   console.log(boutonClique);
   console.log(sectionActuelle);
+  console.log(noteActuelle);
 }
 
 // -------------------------------------------------------------------------------------------------------------
@@ -98,6 +104,7 @@ let opacityCard = 0,
     opacityIntro = 0,
     opacityReveil = 0,
     compteur = 0,
+    pourcentage = 0;
     // TABLEAUX DES ELTS DU SCENARIO PRE-GENERE (lieu, arme, survivant, monstre)
     monScenario = [];
 
@@ -121,7 +128,7 @@ const audio = document.querySelector('audio'),
     noteLieu = document.querySelector('#noteLieu'),
     noteArme = document.querySelector('#noteArme'),
     noteSurvivant = document.querySelector('#noteSurvivant'),
-    noteMontre = document.querySelector('#noteMonstre'),
+    noteMonstre = document.querySelector('#noteMonstre'),
 
     btnCommencer = document.querySelector('#btnCommencer'),
     btnInfos = document.querySelector('#btnInfos'),
@@ -133,6 +140,7 @@ const audio = document.querySelector('audio'),
 
     tabSections = [sectionLieu, sectionArme, sectionSurvivant, sectionMonstre],
     tabVisuelsSections = [visuelLieu, visuelArme, visuelSurvivant, visuelMonstre],
+    tabNotesSections = [noteLieu, noteArme, noteSurvivant, noteMonstre],
     tabBtnsSections = [btnLieu, btnArme, btnSurvivant, btnMonstre];
 
 // OBJETS LIEUX :
@@ -176,10 +184,13 @@ mesCategories = [mesLieux, mesArmes, mesSurvivants, mesMonstres];
 // APPEL DE LA FONCTION 'SCENARISTE' :
 scenariste(mesCategories, monScenario);
 
+// APPEL DE LA FONCTION 'SCRIPTE' :
+realisateur(monScenario, tabVisuelsSections, tabNotesSections, pourcentage);
+
 // GESTION EVENT BOUTONS DES SECTIONS :
 for (let i = 0; i < tabBtnsSections.length; i++) {
   tabBtnsSections[i].addEventListener('click', function () {
-    realisateur(tabBtnsSections[i], tabSections[i]);
+    monteur(tabBtnsSections[i], tabSections[i], tabNotesSections[i]);
   });
 }
 

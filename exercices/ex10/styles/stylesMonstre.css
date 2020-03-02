@@ -4,10 +4,36 @@
   height: 100%;
 
   overflow: hidden;
+  animation: redLight 5s ease forwards;
 }
 
 #visuelMonstre {
   background-size: 500px;
 
-  animation: ouverture 3s ease forwards;
+  opacity: 0;
+  animation: monster 1s 3s ease forwards;
+}
+
+@keyframes redLight {
+  from {
+    background-image: linear-gradient(black, darkred);
+    opacity: 0;
+  } to {
+    background-image: linear-gradient(black, darkred);
+    opacity: 1;
+  }
+}
+
+@keyframes monster {
+  0% {
+    opacity: 0;
+    background-size: 300px;
+    filter: contrast(0);
+  } 50% {
+    opacity: 1;
+  } 100% {
+    background-size: 525px;
+    filter: contrast(1);
+    opacity: 1;
+  }
 }

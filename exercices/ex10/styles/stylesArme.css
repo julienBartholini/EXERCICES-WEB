@@ -21,9 +21,7 @@
 }
 
 @keyframes plusPres {
-  from {
-    
-  } to {
+  to {
     background-size: 600px;
   }
 }

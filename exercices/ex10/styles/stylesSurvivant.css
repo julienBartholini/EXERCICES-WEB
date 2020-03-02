@@ -4,6 +4,31 @@
   height: 100%;
 
   overflow: hidden;
+}
 
-  animation: ouverture 3s ease forwards;
+#visuelSurvivant {
+  animation: ouverture 3s ease forwards, enApproche 4.25s ease-out forwards;
+}
+
+@keyframes enApproche {
+  0% {
+    background-size: 300px;
+    transform: translateY(0);
+    opacity: 0;
+  } 16% {
+    transform: translateY(-25px);
+    opacity: 0;
+  } 32% {
+    transform: translateY(0);
+  } 48% {
+    transform: translateY(-25px);
+  } 64% {
+    transform: translateY(0);
+  } 80% {
+    transform: translateY(-25px);
+  } 100% {
+    background-size: 530px;
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

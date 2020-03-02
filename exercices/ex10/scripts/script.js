@@ -22,6 +22,8 @@ function realisateur(monScenario, tabVisuelsSections, tabNotesSections, pourcent
     tabNotesSections[i].querySelector('h3').textContent = monScenario[i].nom;
     tabNotesSections[i].querySelector('p').textContent = monScenario[i].description;
     pourcentage = pourcentage + monScenario[i].nbPts;
+    tauxDeSurvie.innerHTML = `${pourcentage}%`;
+    remarqueFinale.textContent = '...';
   }
 }
 
@@ -141,7 +143,10 @@ const audio = document.querySelector('audio'),
   btnSurvivant = document.querySelector('#btnSurvivant'),
   btnMonstre = document.querySelector('#btnMonstre'),
 
-  tabSections = [sectionLieu, sectionArme, sectionSurvivant, sectionMonstre],
+  tauxDeSurvie = document.querySelector('#tauxDeSurvie'),
+  remarqueFinale = document.querySelector('#remarqueFinale'),
+
+  tabSections = [sectionLieu, sectionArme, sectionSurvivant, sectionMonstre, sectionResultat],
   tabVisuelsSections = [visuelLieu, visuelArme, visuelSurvivant, visuelMonstre],
   tabNotesSections = [noteLieu, noteArme, noteSurvivant, noteMonstre],
   tabBtnsSections = [btnLieu, btnArme, btnSurvivant, btnMonstre],

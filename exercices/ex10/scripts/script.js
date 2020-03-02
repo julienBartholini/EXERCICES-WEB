@@ -1,5 +1,6 @@
 class Elements {
-  constructor(visuel, nom, description, nbPts) {
+  constructor(emplacement, visuel, nom, description, nbPts) {
+    this.emplacement = emplacement;
     this.visuel = visuel;
     this.nom = nom;
     this.description = description;
@@ -16,17 +17,17 @@ function scenariste(mesCategories, monScenario) {
 
 function realisateur(monScenario, tabVisuelsSections, tabNotesSections, pourcentage) {
   for (let i = 0; i < monScenario.length; i++) {
-    tabVisuelsSections[i].style.backgroundImage = `url(../imgs/lieux/${monScenario[i].visuel}.jpg)`;
+    tabVisuelsSections[i].style.backgroundImage = `url(../imgs/${monScenario[i].emplacement}/${monScenario[i].visuel}.jpg)`;
     tabNotesSections[i].querySelector('h3').textContent = monScenario[i].nom;
     tabNotesSections[i].querySelector('p').textContent = monScenario[i].description;
     pourcentage = pourcentage + monScenario[i].nbPts;
   }
 }
 
-function monteur(boutonClique, sectionActuelle, noteActuelle) {
-  console.log(boutonClique);
-  console.log(sectionActuelle);
-  console.log(noteActuelle);
+function monteur(tabSections, sectionActuelle) {
+  sectionActuelle.style.display = 'none';
+  let iSuivant = (tabSections.indexOf(sectionActuelle)) + 1;
+  tabSections[iSuivant].style.display = 'block';
 }
 
 // -------------------------------------------------------------------------------------------------------------
@@ -103,8 +104,9 @@ function closeReveil() {
 let opacityCard = 0,
     opacityIntro = 0,
     opacityReveil = 0,
+    opacitySection = 1,
     compteur = 0,
-    pourcentage = 0;
+    pourcentage = 0,
     // TABLEAUX DES ELTS DU SCENARIO PRE-GENERE (lieu, arme, survivant, monstre)
     monScenario = [];
 
@@ -141,37 +143,39 @@ const audio = document.querySelector('audio'),
     tabSections = [sectionLieu, sectionArme, sectionSurvivant, sectionMonstre],
     tabVisuelsSections = [visuelLieu, visuelArme, visuelSurvivant, visuelMonstre],
     tabNotesSections = [noteLieu, noteArme, noteSurvivant, noteMonstre],
-    tabBtnsSections = [btnLieu, btnArme, btnSurvivant, btnMonstre];
+    tabBtnsSections = [btnLieu, btnArme, btnSurvivant, btnMonstre],
+
+    nomsDossiersImgs = ['lieux', 'armes', 'survivants', 'monstres'];
 
 // OBJETS LIEUX :
-const rues = new Elements('rues', 'Les Rues', '...', 25),
-hotel = new Elements('hotel', 'Hotel Lakeview', '...', 21),
-ecole = new Elements('ecole', 'Ecole Primaire Midwish', '...', 17),
-hopital = new Elements('hopital', 'Hopital Alchemia', '...', 13),
-egouts = new Elements('egouts', 'Les Egouts', '...', 9),
-prison = new Elements('prison', 'La Prison Lacustre', '...', 3),
+const rues = new Elements(nomsDossiersImgs[0], 'rues', 'Les Rues', '...', 25),
+hotel = new Elements(nomsDossiersImgs[0], 'hotel', 'Hotel Lakeview', '...', 21),
+ecole = new Elements(nomsDossiersImgs[0], 'ecole', 'Ecole Primaire Midwish', '...', 17),
+hopital = new Elements(nomsDossiersImgs[0], 'hopital', 'Hopital Alchemia', '...', 13),
+egouts = new Elements(nomsDossiersImgs[0], 'egouts', 'Les Egouts', '...', 9),
+prison = new Elements(nomsDossiersImgs[0], 'prison', 'La Prison Lacustre', '...', 3),
 // OBJETS ARMES :
-colt = new Elements('colt', 'Colt', '...', 25),
-fusil = new Elements('fusil', 'Fusil', '...', 18),
-pistolet = new Elements('pistole', 'Pistolet', '...', 11),
-tuyau = new Elements('tuyau', "Tuyau d'Acier", '...', 3),
+colt = new Elements(nomsDossiersImgs[1], 'colt', 'Colt', 'Une arme particulièrement puissante. Elle sera verir à bout de la plupart des menaces en un temps record.', 25),
+fusil = new Elements(nomsDossiersImgs[1], 'fusil', 'Fusil', 'Une très bonne arme. Vous ne devriez pas trop craindre pour votre vie... En théorie...', 18),
+pistolet = new Elements(nomsDossiersImgs[1], 'pistolet', 'Pistolet', 'Une bonne arme. Pratique si vous prenez garde de ne pas louper votre tir', 11),
+tuyau = new Elements(nomsDossiersImgs[1], 'tuyau', "Tuyau d'Acier", 'Cette arme pourra vous aider à venir à bout des ennemis, mais le corps à corps augmentera grandement les risques d\'être mortellement blaissé...', 3),
 // OBJETS SURVIVANTS :
-harry = new Elements('harry', 'Harry Mason', '...', 25),
-heather = new Elements('heather', 'Heather Mason', '...', 22),
-henry = new Elements('henry', 'Henry Townshend', '...', 19),
-james = new Elements('james', 'James Sunderland', '...', 16),
-cybil = new Elements('cybil', 'Cybil Bennett', '...', 13),
-douglas = new Elements('douglas', 'Douglas Cartland', '...', 10),
-eileen = new Elements('eileen', 'Eileen Galvin', '...', 7),
-laura = new Elements('laura', 'Laura', '...', 2),
+harry = new Elements(nomsDossiersImgs[2], 'harry', 'Harry Mason', '...', 25),
+heather = new Elements(nomsDossiersImgs[2], 'heather', 'Heather Mason', '...', 22),
+henry = new Elements(nomsDossiersImgs[2], 'henry', 'Henry Townshend', '...', 19),
+james = new Elements(nomsDossiersImgs[2], 'james', 'James Sunderland', '...', 16),
+cybil = new Elements(nomsDossiersImgs[2], 'cybil', 'Cybil Bennett', '...', 13),
+douglas = new Elements(nomsDossiersImgs[2], 'douglas', 'Douglas Cartland', '...', 10),
+eileen = new Elements(nomsDossiersImgs[2], 'eileen', 'Eileen Galvin', '...', 7),
+laura = new Elements(nomsDossiersImgs[2], 'laura', 'Laura', '...', 2),
 // OBJETS MONSTRES
-lyingFigure = new Elements('lyingFigure', 'Lying Figure', '...', 25),
-mumbler = new Elements('mumbler', 'Mumbler', '...', 21),
-nightFlutter = new Elements('nightFlutter', 'Night Flutter', '...', 17),
-nurse = new Elements('nurse', 'Nurse', '...', 13),
-rubberFace = new Elements('rubberFace', 'Rubber Face', '...', 9),
-scraper = new Elements('scraper', 'Scraper', '...', 5),
-pyramid = new Elements('pyramid', 'Pyramid Head', '...', 1);
+lyingFigure = new Elements(nomsDossiersImgs[3], 'lyingFigure', 'Lying Figure', '...', 25),
+mumbler = new Elements(nomsDossiersImgs[3], 'mumbler', 'Mumbler', '...', 21),
+nightFlutter = new Elements(nomsDossiersImgs[3], 'nightFlutter', 'Night Flutter', '...', 17),
+nurse = new Elements(nomsDossiersImgs[3], 'nurse', 'Nurse', '...', 13),
+rubberFace = new Elements(nomsDossiersImgs[3], 'rubberFace', 'Rubber Face', '...', 9),
+scraper = new Elements(nomsDossiersImgs[3], 'scraper', 'Scraper', '...', 5),
+pyramid = new Elements(nomsDossiersImgs[3], 'pyramid', 'Pyramid Head', '...', 1);
 
 // TABLEAUX DES CATEGORIES :
 const mesLieux = [rues, hotel, ecole, hopital, egouts, prison],
@@ -184,13 +188,13 @@ mesCategories = [mesLieux, mesArmes, mesSurvivants, mesMonstres];
 // APPEL DE LA FONCTION 'SCENARISTE' :
 scenariste(mesCategories, monScenario);
 
-// APPEL DE LA FONCTION 'SCRIPTE' :
+// APPEL DE LA FONCTION 'REALISATEUR' :
 realisateur(monScenario, tabVisuelsSections, tabNotesSections, pourcentage);
 
 // GESTION EVENT BOUTONS DES SECTIONS :
 for (let i = 0; i < tabBtnsSections.length; i++) {
   tabBtnsSections[i].addEventListener('click', function () {
-    monteur(tabBtnsSections[i], tabSections[i], tabNotesSections[i]);
+    monteur(tabSections, tabSections[i]);
   });
 }
 

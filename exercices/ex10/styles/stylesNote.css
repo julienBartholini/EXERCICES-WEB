@@ -12,7 +12,7 @@
   background: url(../imgs/papier.png) no-repeat center center / 100% 100%;
 
   opacity: 0;
-  animation: apparitionNote 1s 4s ease forwards;
+  animation: apparitionNote 1s 5s ease forwards;
 }
 
 .notes *:not(button) {
@@ -65,6 +65,6 @@
     transform: translate(-50%, -150%) rotateY(-90deg);
   } to {
     transform: translate(-50%, -50%) rotateY(0deg);
-    opacity: .93;
+    opacity: .8;
   }
 }

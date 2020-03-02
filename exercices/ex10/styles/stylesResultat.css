@@ -4,9 +4,8 @@
   height: 100%;
 
   overflow: hidden;
-  animation: light 3s ease forwards;
+  animation: light 4s ease forwards;
 }
-
 
 #visuelResultat {
   display: flex;
@@ -18,6 +17,8 @@
   transform: translate(-50%, -50%);
   width: 500px;
   height: 200px;
+
+  animation: afficheResult 5s ease forwards;
 }
 
 #visuelResultat p, #visuelResultat h2 {
@@ -34,5 +35,15 @@
     background-color: whitesmoke;
   } to {
     background-color: black;
+  }
+}
+
+@keyframes afficheResult {
+  from {
+    transform: translate(-50%, -50%) scale(2);
+    filter: blur(5px);
+  } to {
+    transform: translate(-50%, -50%) scale(1);
+    filter: blur(0);
   }
 }

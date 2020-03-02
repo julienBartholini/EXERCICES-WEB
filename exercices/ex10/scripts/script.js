@@ -23,7 +23,50 @@ function realisateur(monScenario, tabVisuelsSections, tabNotesSections, pourcent
     tabNotesSections[i].querySelector('p').textContent = monScenario[i].description;
     pourcentage = pourcentage + monScenario[i].nbPts;
     tauxDeSurvie.innerHTML = `${pourcentage}%`;
-    remarqueFinale.textContent = '...';
+
+    let texteRemarqueFinale;
+
+    if (pourcentage <= 10) {
+      texteRemarqueFinale = 'Si vous survivez, jouez au loto...';
+    } else if (pourcentage > 10 && pourcentage <= 15) {
+      texteRemarqueFinale = 'Vous ne partez pas gagnant...';
+    } else if (pourcentage > 15 && pourcentage <= 20) {
+      texteRemarqueFinale = 'Vous aurez beaucoup de mal à survivre...';
+    } else if (pourcentage > 20 && pourcentage <= 25) {
+      texteRemarqueFinale = 'Vous aurez du mal à survivre...';
+    } else if (pourcentage > 25 && pourcentage <= 30) {
+      texteRemarqueFinale = 'Vos chances sont encore faible. Accrochez-vous !';
+    } else if (pourcentage > 30 && pourcentage <= 35) {
+      texteRemarqueFinale = 'Vos chances sont encore un peu faible. Accrochez-vous !';
+    } else if (pourcentage > 35 && pourcentage <= 40) {
+      texteRemarqueFinale = 'Ce sera compliqué mais ne baissez surtout pas les bras.';
+    } else if (pourcentage > 40 && pourcentage <= 45) {
+      texteRemarqueFinale = 'Ce sera un peu compliqué. Ne lachez rien !';
+    } else if (pourcentage > 45 && pourcentage <= 50) {
+      texteRemarqueFinale = 'Ne lachez rien et ne baissez surtout pas la garde !';
+    } else if (pourcentage > 50 && pourcentage <= 55) {
+      texteRemarqueFinale = 'Plus d\'une chance sur 2 mais ne baissez surtout pas la garde !';
+    } else if (pourcentage > 55 && pourcentage <= 60) {
+      texteRemarqueFinale = 'Restez concentré, faites très attention !';
+    } else if (pourcentage > 60 && pourcentage <= 65) {
+      texteRemarqueFinale = 'Pas trop mal mais faites très attention !';
+    } else if (pourcentage > 65 && pourcentage <= 70) {
+      texteRemarqueFinale = 'Pas mal mais faites attention !';
+    } else if (pourcentage > 70 && pourcentage <= 75) {
+      texteRemarqueFinale = 'Bien... Mais ne baissez pas votre garde...';
+    } else if (pourcentage > 75 && pourcentage <= 80) {
+      texteRemarqueFinale = 'Bien ! On reste concentré...';
+    } else if (pourcentage > 80 && pourcentage <= 85) {
+      texteRemarqueFinale = 'Très bien. Restez tout de même vigilant.';
+    } else if (pourcentage > 85 && pourcentage <= 90) {
+      texteRemarqueFinale = 'Vos chance de survie sont très bonnes mais on reste concentré...';
+    } else if (pourcentage > 90 && pourcentage <= 95) {
+      texteRemarqueFinale = 'Vos chances de survie sont exellentes. On se concentre encore un peu.';
+    } else if (pourcentage > 95 && pourcentage <= 100) {
+      texteRemarqueFinale = 'Vous avez toutes vos chances !!! Mais n\'oubliez pas que le risque 0 n\'existe pas. Surtout à SILENT HILL...';
+    }
+
+    remarqueFinale.textContent = texteRemarqueFinale;
   }
 }
 

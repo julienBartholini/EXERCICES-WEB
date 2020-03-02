@@ -16,10 +16,10 @@
 
 @keyframes redLight {
   from {
-    background-image: linear-gradient(black, darkred);
+    background-image: linear-gradient(black, brown);
     opacity: 0;
   } to {
-    background-image: linear-gradient(black, darkred);
+    background-image: linear-gradient(black, brown);
     opacity: 1;
   }
 }

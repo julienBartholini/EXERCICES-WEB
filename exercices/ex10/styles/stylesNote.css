@@ -68,3 +68,9 @@
     opacity: .93;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .notes {
+    width: 90%;
+  }
+}

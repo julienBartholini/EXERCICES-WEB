@@ -65,6 +65,6 @@
     transform: translate(-50%, -150%) rotateY(-90deg);
   } to {
     transform: translate(-50%, -50%) rotateY(0deg);
-    opacity: .8;
+    opacity: .93;
   }
 }

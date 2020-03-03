@@ -18,7 +18,7 @@ function scenariste(mesCategories, monScenario) {
 
 function realisateur(monScenario, tabVisuelsSections, tabNotesSections, pourcentage) {
   for (let i = 0; i < monScenario.length; i++) {
-    tabVisuelsSections[i].style.backgroundImage = `url(../imgs/${monScenario[i].emplacement}/${monScenario[i].visuel}.${monScenario[i].extention})`;
+    tabVisuelsSections[i].style.backgroundImage = `url(imgs/${monScenario[i].emplacement}/${monScenario[i].visuel}.${monScenario[i].extention})`;
     tabNotesSections[i].querySelector('h3').textContent = monScenario[i].nom;
     tabNotesSections[i].querySelector('p').textContent = monScenario[i].description;
     pourcentage = pourcentage + monScenario[i].nbPts;
@@ -198,11 +198,11 @@ const audio = document.querySelector('audio'),
   extentions = ['jpg', 'png'];
 
 // OBJETS LIEUX :
-const rues = new Elements(nomsDossiersImgs[0], 'rues', 'Les Rues', '...', 25, extentions[0]),
-  hotel = new Elements(nomsDossiersImgs[0], 'hotel', 'Hotel Lakeview', '...', 21, extentions[0]),
-  ecole = new Elements(nomsDossiersImgs[0], 'ecole', 'Ecole Primaire Midwish', '...', 17, extentions[0]),
-  hopital = new Elements(nomsDossiersImgs[0], 'hopital', 'Hopital Alchemia', '...', 13, extentions[0]),
-  egouts = new Elements(nomsDossiersImgs[0], 'egouts', 'Les Egouts', '...', 9, extentions[0]),
+const rues = new Elements(nomsDossiersImgs[0], 'rues', 'Les Rues', 'Les rues de SILENT HILL bien que peuplées de créatures, restent un endroit relativement calme. L\'espace et la clareté environnante vous permettront de voir arriver vos ennemis bien avant que ceci vous atteignent. A condition bien sûre de ne pas vous laisser surprendre par l\épais brouillard qui englobe la ville...', 25, extentions[0]),
+  hotel = new Elements(nomsDossiersImgs[0], 'hotel', 'Hotel Lakeview', 'Cet hotel autrefois calme et paisible fut construit au bord du lac Tuluca, au Nord de la ville. Un terible incendie veint cloturer à jamais ce bel endroit. Pourtant, certaines personnes s\'étant aventuré près de celui-ci ces dernières années, confirment que ce dernier serait encore dans son état d\'origine, avant les flammes... Avant les morts...', 21, extentions[0]),
+  ecole = new Elements(nomsDossiersImgs[0], 'ecole', 'Ecole Primaire Midwish', 'Une école à première vue saine et pronant les valeurs chretiennes. Bien réputée à l\'époque où SILENT HILL était encore une petite ville paisible. Pourtant, des rumeurs disent que cette institut cachée en son sein des membres de l\'Ordre, une organisation pronant un culte païen aux dogme douteux, remontant à la construction de la ville...', 17, extentions[0]),
+  hopital = new Elements(nomsDossiersImgs[0], 'hopital', 'Hopital Alchemia', 'Il s\'agit du plus vieil hopital de la ville. Il a été construit en 1xxx .... . Il existerait un second sous-sol accéssible via la remise. Les employés de l\'institut auraient d\'ailleurs pour ordre de ne jamais y mettre les pieds sous peine de sanction immédiate...', 13, extentions[0]),
+  egouts = new Elements(nomsDossiersImgs[0], 'egouts', 'Les Egouts', 'Un lieu sombre et humide, mais également immense et peuplé de créatures. communication autre mendfdfff', 9, extentions[0]),
   prison = new Elements(nomsDossiersImgs[0], 'prison', 'La Prison Lacustre', '...', 3, extentions[0]),
   // OBJETS ARMES :
   colt = new Elements(nomsDossiersImgs[1], 'colt', 'Colt', 'Une arme particulièrement puissante. Elle sera venir à bout de la plupart des menaces en un temps record.', 25, extentions[0]),

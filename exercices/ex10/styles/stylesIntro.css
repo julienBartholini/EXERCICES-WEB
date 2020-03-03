@@ -111,3 +111,13 @@ h1 span {
 #btnFermer:hover {
   opacity: 1;
 }
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h1 span {
+    font-size: 30px;
+  }
+}

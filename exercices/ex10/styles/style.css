@@ -59,6 +59,8 @@ main > section {
 
 footer {
   bottom: 0;
+
+  text-align: center;
 }
 
 @keyframes ouverture {
